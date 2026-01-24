@@ -1,0 +1,15 @@
+# Ignore temporary files
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.DS_Store
+Gemfile.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db

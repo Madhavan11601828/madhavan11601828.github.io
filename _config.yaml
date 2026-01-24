@@ -1,8 +1,10 @@
-
-
-
-```yaml
 title: Mangena Venu Madhavan
 description: Generative AI | Data Science | Agentic AI
 theme: minima
-```
+author: Mangena Venu Madhavan
+email: your-email@example.com
+social_media_links:
+  github: madhavan11601828
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
