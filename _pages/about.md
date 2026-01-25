@@ -169,9 +169,10 @@ permalink: /about/
   /* Skills Section */
   .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 100%;
   }
 
   .skill-category {
@@ -246,9 +247,10 @@ permalink: /about/
   /* Awards Section */
   .awards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+    width: 100%;
   }
 
   .award-card {
@@ -313,9 +315,10 @@ permalink: /about/
   /* Stats Section */
   .stats-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     margin: 40px 0;
+    width: 100%;
   }
 
   .stat-card {

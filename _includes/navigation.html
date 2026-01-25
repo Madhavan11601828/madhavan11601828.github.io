@@ -4,7 +4,7 @@
     <!-- Logo / Home Link -->
     <a href="/" class="nav-brand">
       <img src="/assets/images/Logo.png" alt="Logo" class="nav-logo">
-      <span class="brand-text">Mangena Venu</span>
+      <span class="brand-text">Venu</span>
     </a>
 
     <!-- Hamburger Menu (Mobile) -->
@@ -18,26 +18,22 @@
     <ul class="nav-menu" id="navMenu">
       <li class="nav-item">
         <a href="/" class="nav-link">
-          <span class="nav-icon">🏠</span>
           <span class="nav-text">Home</span>
         </a>
       </li>
       <li class="nav-item">
         <a href="/#pillars-section" class="nav-link">
-          <span class="nav-icon">📚</span>
-          <span class="nav-text">Learning Pillars</span>
+          <span class="nav-text">Learning</span>
         </a>
       </li>
       <li class="nav-item">
         <a href="/blog" class="nav-link">
-          <span class="nav-icon">📝</span>
           <span class="nav-text">Blog</span>
         </a>
       </li>
       <li class="nav-item">
         <a href="/about/" class="nav-link">
-          <span class="nav-icon">👤</span>
-          <span class="nav-text">About Me</span>
+          <span class="nav-text">About</span>
         </a>
       </li>
     </ul>
@@ -48,11 +44,11 @@
   /* Navigation Styling */
   .site-nav {
     background: var(--card-bg);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 999;
-    box-shadow: 0 2px 8px var(--card-shadow);
+    box-shadow: 0 1px 3px var(--card-shadow);
     transition: all 0.3s ease;
   }
 
@@ -63,44 +59,45 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: 60px;
   }
 
   /* Brand Logo */
   .nav-brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     text-decoration: none;
     color: var(--text-primary);
-    font-weight: 700;
-    font-size: 1.2em;
+    font-weight: 600;
+    font-size: 1em;
     transition: all 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 8px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    flex-shrink: 0;
   }
 
   .nav-brand:hover {
-    background: var(--bg-secondary);
     color: var(--accent-primary);
   }
 
   .nav-logo {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
   }
 
   .brand-text {
     display: none;
+    font-size: 0.95em;
   }
 
   /* Navigation Menu */
   .nav-menu {
     display: flex;
     list-style: none;
-    gap: 5px;
+    gap: 2px;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -110,57 +107,36 @@
     position: relative;
   }
 
-  /* Navigation Link - Collapsed by default */
+  /* Navigation Link */
   .nav-link {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
+    gap: 6px;
+    padding: 8px 14px;
     text-decoration: none;
     color: var(--text-secondary);
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    border-radius: 6px;
+    transition: all 0.2s ease;
     white-space: nowrap;
     font-size: 0.95em;
-  }
-
-  .nav-icon {
-    font-size: 1.3em;
-    display: inline-block;
-    transition: all 0.3s ease;
+    font-weight: 500;
   }
 
   .nav-text {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  /* Expand on Hover (Desktop) */
-  .nav-item:hover .nav-link {
-    background: var(--bg-secondary);
-    color: var(--accent-primary);
-    padding: 8px 16px;
-  }
-
-  .nav-item:hover .nav-text {
     display: inline;
     opacity: 1;
   }
 
-  .nav-item:hover .nav-icon {
-    transform: scale(1.1);
+  /* Hover effect */
+  .nav-item:hover .nav-link {
+    background: var(--bg-secondary);
+    color: var(--accent-primary);
   }
 
   /* Active Link */
   .nav-link.active {
     background: var(--accent-primary);
     color: white;
-  }
-
-  .nav-link.active .nav-text {
-    display: inline;
-    opacity: 1;
   }
 
   /* Hamburger Menu (Mobile) */
@@ -172,18 +148,19 @@
     border: none;
     cursor: pointer;
     padding: 8px;
+    flex-shrink: 0;
   }
 
   .nav-toggle span {
-    width: 25px;
-    height: 3px;
+    width: 22px;
+    height: 2.5px;
     background: var(--text-primary);
     border-radius: 2px;
     transition: all 0.3s ease;
   }
 
   .nav-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(8px, 8px);
   }
 
   .nav-toggle.active span:nth-child(2) {
@@ -191,36 +168,36 @@
   }
 
   .nav-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    transform: rotate(-45deg) translate(7px, -6px);
   }
 
   /* Mobile Responsive */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .nav-toggle {
       display: flex;
     }
 
     .nav-container {
-      height: auto;
-      padding: 15px 20px;
+      height: 55px;
+      padding: 0 15px;
     }
 
     .nav-menu {
-      position: absolute;
-      top: 70px;
+      position: fixed;
+      top: 55px;
       left: 0;
       right: 0;
       flex-direction: column;
       gap: 0;
       background: var(--card-bg);
-      border-bottom: 2px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
     }
 
     .nav-menu.active {
-      max-height: 300px;
+      max-height: 250px;
     }
 
     .nav-item {
@@ -230,33 +207,33 @@
 
     .nav-link {
       width: 100%;
-      padding: 15px 20px;
+      padding: 14px 15px;
       border-radius: 0;
-      font-size: 1em;
-    }
-
-    .nav-link .nav-text {
-      display: inline;
-      opacity: 1;
+      font-size: 0.95em;
     }
 
     .nav-item:hover .nav-link {
-      padding: 15px 20px;
+      padding: 14px 15px;
     }
 
     .brand-text {
       display: inline;
     }
-
-    .nav-menu.active .nav-text {
-      display: inline;
-      opacity: 1;
-    }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     .nav-container {
-      padding: 12px 15px;
+      height: 50px;
+      padding: 0 12px;
+    }
+
+    .nav-logo {
+      width: 35px;
+      height: 35px;
+    }
+
+    .nav-menu {
+      top: 50px;
     }
 
     .brand-text {
@@ -265,7 +242,11 @@
 
     .nav-link {
       font-size: 0.9em;
-      padding: 12px 15px;
+      padding: 12px 12px;
+    }
+
+    .nav-toggle span {
+      width: 20px;
     }
   }
 </style>
@@ -304,7 +285,9 @@
     const currentPath = window.location.pathname;
     document.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('href');
-      if (href === currentPath || (currentPath === '/' && href === '/')) {
+      // Match path or home
+      if ((href === '/' && currentPath === '/') || 
+          (href !== '/' && currentPath.startsWith(href.split('#')[0]))) {
         link.classList.add('active');
       }
     });
