@@ -92,38 +92,6 @@ layout: default
   </div>
 </section>
 
-<section class="featured-section">
-  <div class="container">
-    <h2 class="section-title"> Featured Topics</h2>
-    
-    <div class="topics-grid">
-      <div class="topic-card">
-        <div class="topic-icon"></div>
-        <h3>Generative AI & LLMs</h3>
-        <p>Deep dives into building with Large Language Models, prompt engineering, and production architectures</p>
-      </div>
-      
-      <div class="topic-card">
-        <div class="topic-icon"></div>
-        <h3>Agentic AI</h3>
-        <p>Autonomous agents, multi-agent systems, and intelligent automation for real-world problems</p>
-      </div>
-      
-      <div class="topic-card">
-        <div class="topic-icon"></div>
-        <h3>Data Science</h3>
-        <p>Analytics, machine learning pipelines, data visualization, and insights from data</p>
-      </div>
-      
-      <div class="topic-card">
-        <div class="topic-icon"></div>
-        <h3>Architecture & Design</h3>
-        <p>System design patterns, scalability, production considerations, and best practices</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="featured-posts" class="posts-section">
   <div class="container">
     <h2 class="section-title"> Latest Articles</h2>
