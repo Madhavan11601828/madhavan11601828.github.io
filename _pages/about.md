@@ -458,7 +458,7 @@ permalink: /about/
     <h3>Current Role</h3>
     <div class="position">Associate Consultant - Python Developer & Generative AI Specialist</div>
     <div class="company">Infosys Limited | Hyderabad, India</div>
-    <div class="duration">January 2024 – Present (1+ years)</div>
+    <div class="duration">January 2024 – Present (2+ years)</div>
     <ul>
       <li><strong>Agent Development:</strong> Designed and deployed intelligent agents including a financial analysis system for Intel providing actionable insights into operational/capital expenditures, and an automation agent for Delek streamlining purchase order validation with AI-powered checkpoints.</li>
       <li><strong>LLM Solutions:</strong> Engineered semantic search solutions for RCA documents using LangChain and LlamaIndex, improving root-cause analysis speed and accuracy.</li>
