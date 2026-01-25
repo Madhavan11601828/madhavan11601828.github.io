@@ -18,11 +18,79 @@ layout: default
     </p>
 
     <div class="hero-cta">
-      <a href="#featured-posts" class="btn btn-primary">Read My Latest Articles</a>
-      <a href="https://github.com/madhavan11601828" class="btn btn-secondary">Follow on GitHub</a>
+      <a href="#pillars-section" class="btn btn-primary">Explore Learning Pillars</a>
+      <a href="#featured-posts" class="btn btn-secondary">Read Latest Articles</a>
     </div>
   </div>
 </div>
+
+<!-- Pillars Navigation Section -->
+<section id="pillars-section" class="pillars-nav-section">
+  <div class="container">
+    <div class="pillars-header">
+      <h2>📚 Your AI Learning Journey</h2>
+      <p>Master AI progressively through 7 interconnected pillars, from foundations to autonomous agents</p>
+    </div>
+
+    <div class="pillars-quick-nav">
+      <a href="/foundations/" class="pillar-nav-card" style="border-top-color: #FF6B6B;">
+        <span class="pillar-icon">📊</span>
+        <h4>Data Science Foundations</h4>
+        <p>Master Python, NumPy, Pandas & visualization</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/machine-learning/" class="pillar-nav-card" style="border-top-color: #4ECDC4;">
+        <span class="pillar-icon">🤖</span>
+        <h4>Machine Learning</h4>
+        <p>Build predictive and clustering models</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/nlp/" class="pillar-nav-card" style="border-top-color: #45B7D1;">
+        <span class="pillar-icon">📝</span>
+        <h4>Natural Language Processing</h4>
+        <p>Process and understand human language</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/computer-vision/" class="pillar-nav-card" style="border-top-color: #FFA07A;">
+        <span class="pillar-icon">👁️</span>
+        <h4>Computer Vision</h4>
+        <p>Teach machines to see and interpret images</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/deep-learning/" class="pillar-nav-card" style="border-top-color: #98D8C8;">
+        <span class="pillar-icon">🧠</span>
+        <h4>Deep Learning & Transformers</h4>
+        <p>Master advanced neural architectures</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/generative-ai/" class="pillar-nav-card" style="border-top-color: #F7DC6F;">
+        <span class="pillar-icon">✨</span>
+        <h4>Generative AI & LLMs</h4>
+        <p>Build with Large Language Models</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/agentic-ai/" class="pillar-nav-card" style="border-top-color: #BB8FCE;">
+        <span class="pillar-icon">🤖</span>
+        <h4>Agentic AI</h4>
+        <p>Create autonomous intelligent agents</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/pillars/" class="pillar-nav-card pillar-nav-card-full">
+        <span class="pillar-icon">🏛️</span>
+        <h4>View Complete Learning Path</h4>
+        <p>See the full curriculum structure with timelines and roadmaps</p>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <section class="featured-section">
   <div class="container">
@@ -160,6 +228,97 @@ layout: default
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
+}
+
+/* Pillars Navigation Section */
+.pillars-nav-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+.pillars-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pillars-header h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.pillars-header p {
+  font-size: 1.1em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.pillars-quick-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.pillar-nav-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 10px;
+  border-top: 4px solid #667eea;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.pillar-nav-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
+}
+
+.pillar-nav-card.pillar-nav-card-full {
+  grid-column: 1 / -1;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pillar-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.pillar-nav-card h4 {
+  font-size: 1.1em;
+  color: #333;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.pillar-nav-card p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 10px 0 15px 0;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.pillar-nav-card .arrow {
+  color: #667eea;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.pillar-nav-card:hover .arrow {
+  transform: translateX(5px);
 }
 
 .hero-title {
@@ -488,6 +647,19 @@ layout: default
     width: 100%;
   }
   
+  .pillars-header h2 {
+    font-size: 2em;
+  }
+  
+  .pillars-quick-nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .pillar-nav-card.pillar-nav-card-full {
+    grid-column: 1 / -1;
+  }
+  
   .topics-grid,
   .posts-grid,
   .connect-grid {
@@ -512,6 +684,14 @@ layout: default
   .hero-logo {
     width: 100px;
     height: 100px;
+  }
+  
+  .pillars-quick-nav {
+    grid-template-columns: 1fr;
+  }
+  
+  .pillar-nav-card.pillar-nav-card-full {
+    grid-column: 1;
   }
 }
 </style>
