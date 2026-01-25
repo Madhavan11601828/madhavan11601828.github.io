@@ -3,6 +3,7 @@ description: Generative AI | Data Science | Agentic AI
 theme: jekyll-theme-leap-day
 author: Mangena Venu Madhavan
 email: venumangenamadhavan@gmail.com
+logo: /assets/images/Logo.png
 social_media_links:
   github: madhavan11601828
 plugins:
