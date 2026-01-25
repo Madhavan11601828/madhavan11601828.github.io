@@ -18,8 +18,9 @@ layout: default
     </p>
 
     <div class="hero-cta">
-      <a href="#pillars-section" class="btn btn-primary">Explore Learning Pillars</a>
-      <a href="#featured-posts" class="btn btn-secondary">Read Latest Articles</a>
+      <a href="/about/" class="btn btn-primary">Learn About Me</a>
+      <a href="#pillars-section" class="btn btn-secondary">Explore Learning Pillars</a>
+      <a href="#featured-posts" class="btn btn-tertiary">Read Latest Articles</a>
     </div>
   </div>
 </div>
@@ -349,6 +350,18 @@ layout: default
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-tertiary {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-tertiary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: white;
   transform: translateY(-2px);
 }
 
