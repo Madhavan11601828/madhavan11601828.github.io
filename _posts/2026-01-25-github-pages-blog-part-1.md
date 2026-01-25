@@ -1,431 +1,323 @@
 ---
-title: "Building a GitHub Pages Blog: From Zero to Production - Part 1"
+title: "Building a GitHub Pages Blog - Part 1: From Zero to Published (Basics)"
 author: "Mangena Venu Madhavan"
 date: 2026-01-25
-categories: [foundations]
-tags: [GitHub-Pages, Jekyll, Blog-Setup, Web-Development, DevOps]
-series: "Building a GitHub Pages Blog"
-series-part: 1
+categories: [blog-development, github-pages, jekyll]
+tags: [github-pages, jekyll, blog, static-site-generator, beginners]
 ---
 
-## 1️⃣ Problem Statement
+# Building a GitHub Pages Blog - Part 1: From Zero to Published (Basics)
 
-**The Challenge:** You want to share your technical knowledge and build a professional blog, but you don't want to:
-- Pay for hosting
-- Manage servers
-- Deal with complex DevOps infrastructure
-- Spend weeks learning web frameworks
+## Problem Statement
 
-**Real Scenario:**
-> *You're a data scientist who wants to document your AI learning journey and share insights with the community. You have great content ideas, but setting up a blog from scratch seems overwhelming. You could use Medium, but you want complete control over your content and styling.*
+Starting a blog can be overwhelming. You need hosting, domain management, content management systems, and ongoing maintenance. But what if you could have a **free, powerful blog** that deploys automatically, requires minimal setup, and is version-controlled like your code? That's GitHub Pages with Jekyll.
 
-**Why This Matters:**
-- **Free Hosting**: GitHub Pages is completely free
-- **Content Control**: You own your content, styling, and SEO
-- **Professional**: Looks like a real website, not a basic template
-- **Version Control**: Git history tracks all your changes
-- **No Maintenance**: GitHub handles all the infrastructure
-- **Beautiful Design**: Create exactly what you envision
+This series documents my real journey of creating this blog, including every challenge faced and how I solved it. Perfect for anyone wanting to start technical blogging without complexity.
 
 ---
 
-## 2️⃣ Concept Explained Simply
+## What is GitHub Pages + Jekyll?
 
-**GitHub Pages is a simple solution for hosting static websites directly from a GitHub repository.**
+**GitHub Pages** is a free static site hosting service directly from your GitHub repository. 
 
-Think of it like this:
-- **Traditional Blogging**: You write content → Upload to server → Server generates HTML → Browser displays it
-- **GitHub Pages**: You write Markdown → Push to GitHub → Jekyll converts to HTML → GitHub serves it → Done!
+**Jekyll** is a static site generator that converts Markdown files into a complete website.
 
-**The Magic Behind It:**
-
-1. **Jekyll** (Static Site Generator)
-   - Converts Markdown files into HTML
-   - Handles templating and styling
-   - Runs automatically when you push to GitHub
-
-2. **GitHub Pages**
-   - Takes your Jekyll site
-   - Generates HTML on their servers
-   - Serves it to the world for free
-   - Uses `yourusername.github.io` as your domain
-
-3. **Your Workflow**
-   - Write blog posts in Markdown
-   - Push to GitHub
-   - Site updates automatically in 1-2 minutes
-   - No manual HTML, no FTP uploads
-
-**Key Benefits at a Glance:**
-- ✅ Free forever
-- ✅ Automatic deployments
-- ✅ Full version control history
-- ✅ Professional appearance
-- ✅ Complete creative control
-- ✅ SEO optimized out of the box
+**Together**: You write Markdown → Push to GitHub → Automatic build & deployment → Live blog ✨
 
 ---
 
-## 3️⃣ The Architecture
+## Why GitHub Pages for Blogging?
 
-**Before we dive into code, understand the structure:**
+### Benefits
+- **Free hosting** - No monthly fees
+- **Version control** - Your blog is in Git, tracked like code
+- **Automatic deployment** - Push to main branch, site updates in seconds
+- **No databases** - Static files are fast and secure
+- **Custom domain** - Point your own domain
+- **Markdown-based** - Write in Markdown, not clicking in UI
+- **Full customization** - It's just HTML/CSS/Jekyll
 
-```
-Your Blog Repository (yourusername.github.io)
-│
-├── _config.yaml           (Site configuration)
-├── _posts/                (Your blog articles)
-│   ├── 2026-01-25-post-title.md
-│   └── 2026-01-26-another-post.md
-│
-├── _pages/                (Static pages - about, contact, etc)
-│   └── about.md
-│
-├── assets/                (Images, CSS, JavaScript)
-│   ├── css/
-│   ├── images/
-│   └── js/
-│
-├── index.md               (Homepage)
-├── README.md              (Repository description)
-└── Gemfile                (Ruby dependencies)
-
-JEKYLL PROCESSES THIS ↓
-
-GitHub Pages (their servers)
-│
-└── Public Website
-    ├── index.html
-    ├── posts/
-    │   ├── 2026/01/25/post-title/index.html
-    │   └── 2026/01/26/another-post/index.html
-    │
-    ├── assets/
-    └── [All served as static HTML files]
-```
-
-**Why This Matters:**
-- Static sites are **fast** (no database, no processing)
-- Static sites are **secure** (nothing to hack)
-- Static sites are **cheap** (no servers to maintain)
+### Tradeoffs
+- Static content only (no real-time features)
+- Build limits (GitHub Actions has reasonable limits)
+- Jekyll-specific (though other static generators work too)
 
 ---
 
-## 4️⃣ Step-by-Step Setup (The Code)
+## Prerequisites
 
-### Step 1: Create the Repository
+Before starting, you need:
+
+1. **GitHub Account** - [github.com](https://github.com)
+2. **Git installed** - [git-scm.com](https://git-scm.com)
+3. **Text editor** - VSCode, Sublime, or similar
+4. **Ruby 2.7+** - [rubyinstaller.org](https://rubyinstaller.org) (for local testing)
+5. **Command line comfort** - Basic terminal commands
+
+---
+
+## Step 1: Create Your Repository
+
+### Create on GitHub
+
+1. Go to [github.com](https://github.com) and sign in
+2. Click **+** → **New repository**
+3. Name it: `USERNAME.github.io` (replace USERNAME with your GitHub username)
+   - This is **critical** - must match your username exactly
+4. Make it **Public** (GitHub Pages requires this)
+5. Initialize with README (optional)
+6. Click **Create repository**
+
+**Example:** If your username is `johnsmith`, name it `johnsmith.github.io`
+
+### Clone to Your Computer
 
 ```bash
-# Go to GitHub and create a NEW repository
-Repository Name: yourusername.github.io
-Description: "My AI Learning Blog"
-Visibility: Public (required for free GitHub Pages)
+git clone https://github.com/USERNAME/USERNAME.github.io.git
+cd USERNAME.github.io
 ```
 
-### Step 2: Clone and Initialize
+---
+
+## Step 2: Set Up Jekyll Locally
+
+### Install Ruby (Windows)
+
+1. Download Ruby installer: [rubyinstaller.org](https://rubyinstaller.org/downloads/)
+2. Run the installer
+3. During installation, check **Add Ruby to PATH**
+4. Complete installation
+
+**Verify:** Open terminal and run:
+```bash
+ruby --version
+```
+
+Should output something like: `ruby 3.2.0p0`
+
+### Install Jekyll & Bundler
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/yourusername.github.io.git
-cd yourusername.github.io
-
-# Create basic structure
-mkdir _posts _pages assets/css assets/images assets/js
+gem install bundler jekyll
 ```
 
-### Step 3: Create _config.yaml
+### Create Jekyll Site
+
+```bash
+jekyll new .
+```
+
+This creates:
+```
+├── _config.yml          (Configuration)
+├── _posts/              (Blog posts folder)
+├── _layouts/            (HTML templates)
+├── _includes/           (Reusable components)
+├── Gemfile              (Dependencies)
+├── index.md             (Homepage)
+└── about.md             (About page)
+```
+
+### Install Dependencies
+
+```bash
+bundle install
+```
+
+---
+
+## Step 3: Create Your First Post
+
+Posts go in `_posts/` folder with format: `YYYY-MM-DD-title.md`
+
+**Create:** `_posts/2026-01-25-hello-world.md`
+
+```markdown
+---
+layout: post
+title: "Hello World - My First Blog Post"
+date: 2026-01-25
+categories: [blog]
+tags: [first-post]
+---
+
+# Hello World!
+
+This is my first blog post using Jekyll and GitHub Pages!
+
+## Why I Started Blogging
+
+I wanted to share my knowledge about...
+
+## What You'll Find Here
+
+- Technical tutorials
+- Project breakdowns
+- Learning journey
+
+More content coming soon!
+```
+
+**Key parts:**
+- **Front matter** (between `---`) - Metadata for Jekyll
+- **Markdown content** - Your actual post
+- **Categories** - Used for organizing
+- **Tags** - For filtering and discovery
+
+---
+
+## Step 4: Configure Your Site
+
+Edit `_config.yml`:
 
 ```yaml
-# Site Configuration
-title: "Your Name - AI Learning Blog"
-description: "Sharing insights on AI, Data Science, and Technology"
+title: "Your Name"
 author: "Your Name"
-email: "your.email@example.com"
-url: "https://yourusername.github.io"
-baseurl: ""
-
-# Build settings
+description: "Brief description of your blog"
+baseurl: "" 
+url: "https://USERNAME.github.io"
 theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
 
-# Markdown processor
-markdown: kramdown
-
-# Exclude from processing
-exclude:
-  - .gitignore
-  - Gemfile
-  - Gemfile.lock
-  - README.md
+# Optional
+twitter_username: your_handle
+github_username: your_username
 ```
 
-### Step 4: Create Gemfile
+### Key Settings
 
-```ruby
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
+| Setting | Purpose |
+|---------|---------|
+| `title` | Blog name in header |
+| `description` | Short tagline |
+| `url` | Your site URL |
+| `theme` | Jekyll theme (minima is default) |
 
-group :jekyll_plugins do
-  gem 'jekyll-feed'
-  gem 'jekyll-seo-tag'
-end
-```
-
-### Step 5: Create index.md (Homepage)
-
-```markdown
----
-layout: default
-title: Home
 ---
 
-# Welcome to My Blog
-
-This is the homepage. You can customize it however you like!
-
-## Latest Posts
-
-{% for post in site.posts limit:5 %}
-- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
-{% endfor %}
-```
-
-### Step 6: Create Your First Post
-
-Create `_posts/2026-01-25-hello-world.md`:
-
-```markdown
----
-title: "Hello World - Welcome to My Blog"
-author: "Your Name"
-date: 2026-01-25
-tags: [welcome, first-post]
----
-
-# Hello World! 👋
-
-This is my first blog post. I'm excited to share my learning journey!
-
-## What This Blog Is About
-
-- AI and Machine Learning
-- Data Science
-- Building intelligent systems
-
-Stay tuned for more content!
-```
-
-### Step 7: Push to GitHub
+## Step 5: Test Locally
 
 ```bash
-# Add all files
+bundle exec jekyll serve
+```
+
+Output:
+```
+Server address: http://127.0.0.1:4000/
+Server running... press ctrl-c to stop.
+```
+
+**Visit:** `http://localhost:4000` in your browser
+
+You should see:
+- Your title in header
+- "Hello World" post in feed
+- About page
+
+---
+
+## Step 6: Publish to GitHub
+
+```bash
+# Add all changes
 git add .
 
 # Commit
-git commit -m "Initial blog setup with Jekyll"
+git commit -m "Initial Jekyll setup with first blog post"
 
-# Push
+# Push to GitHub
 git push origin main
 ```
 
-### Step 8: Enable GitHub Pages
+**Wait 1-2 minutes**, then visit: `https://USERNAME.github.io`
 
-1. Go to your repository settings
-2. Scroll to "GitHub Pages" section
-3. Select "Deploy from a branch"
-4. Choose "main" branch and root folder
-5. Wait 1-2 minutes
-6. Visit `https://yourusername.github.io`
-
-**That's it!** Your blog is live! 🎉
+Your blog is **live**! 🎉
 
 ---
 
-## 5️⃣ What You'll See
+## Troubleshooting Common Issues
 
-**After setup, your site will have:**
+### Issue: "Bundler command not found"
+**Solution:** Ruby not in PATH. Reinstall Ruby and check "Add to PATH"
 
-```
-Homepage (index.md)
-└── Your latest blog posts listed automatically
+### Issue: "Site not updating"
+**Solution:** GitHub Pages builds are slow sometimes. Wait 2-3 minutes. Check Actions tab in GitHub.
 
-Blog Post (each .md file in _posts/)
-├── Title and metadata (from frontmatter)
-├── Your content rendered as HTML
-└── Automatic URL: /2026/01/25/your-post-title/
+### Issue: "404 when visiting site"
+**Solutions:**
+1. Check repository name is exactly `USERNAME.github.io`
+2. Ensure repository is PUBLIC
+3. Check GitHub Actions for build errors
 
-Beautiful Typography
-├── Headers formatted nicely
-├── Code blocks with syntax highlighting
-└── Links and images working automatically
-
-Responsive Design
-├── Looks good on mobile
-├── Looks good on tablet
-└── Looks good on desktop
-```
+### Issue: "Local site works but not on GitHub"
+**Solution:** YAML in `_config.yml` has syntax error. Use YAML validator online.
 
 ---
 
-## 6️⃣ Real-World Example: This Blog
+## What's Next?
 
-**This blog (madhavan11601828.github.io) uses:**
+You now have a **working blog**! In Part 2, we'll cover:
 
-✅ **7-Pillar Learning Structure**
-- Each pillar is a category page
-- Posts are organized by difficulty and topic
-
-✅ **Custom Styling**
-- Gradient backgrounds
-- Color-coded pillars
-- Responsive grid layouts
-- Animated hero section
-
-✅ **Automatic Features**
-- RSS feed (auto-generated)
-- SEO optimization
-- Responsive design
-- Fast loading times
-
-✅ **Zero Infrastructure**
-- No servers to manage
-- No databases
-- No DevOps headaches
-- Auto-deployment on every push
+- ✅ Custom domain setup
+- ✅ Jekyll themes and customization
+- ✅ Creating navigation menus
+- ✅ Adding categories and tags pages
+- ✅ SEO optimization
 
 ---
 
-## 7️⃣ Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
-### ❌ Mistake 1: Repository Name Wrong
-**Wrong:** `my-ai-blog` (GitHub Pages won't recognize it)
-**Right:** `yourusername.github.io` (Must be exact!)
+❌ **Using hyphens in front matter** - Use underscores: `last_name` not `last-name`
 
-### ❌ Mistake 2: Forgetting YAML Frontmatter
-**Wrong:**
-```markdown
-# My Post Title
-This is my content...
-```
-**Right:**
-```markdown
----
-title: "My Post Title"
-date: 2026-01-25
----
+❌ **File naming wrong** - Must be `YYYY-MM-DD-title.md` exactly
 
-This is my content...
-```
+❌ **Repository name typo** - Triple-check `USERNAME.github.io` matches exactly
 
-### ❌ Mistake 3: Private Repository
-**Wrong:** Creating a private repo (GitHub Pages requires public)
-**Right:** Make it public (your content is visible anyway)
+❌ **Forgetting to push** - Changes locally don't auto-sync. Must `git push`
 
-### ❌ Mistake 4: Post Date in the Future
-Jekyll won't publish posts with future dates by default.
-**Wrong:** `date: 2026-12-25` (if today is 2026-01-25)
-**Right:** `date: 2026-01-25` (use today's date)
-
-### ❌ Mistake 5: Not Testing Locally
-Push directly without testing = broken site
-**Right:** Use `bundle exec jekyll serve` locally first
-
-### ❌ Mistake 6: YAML Syntax Errors
-Spaces matter in YAML!
-**Wrong:** `title:My Post` (no space after colon)
-**Right:** `title: "My Post"` (proper spacing)
+❌ **Enabling settings** - GitHub Pages settings should have main branch selected
 
 ---
 
-## 8️⃣ Interview Questions
+## Interview Questions
 
-### Q1: Why would you choose GitHub Pages over traditional hosting?
-**Answer:** GitHub Pages is ideal for technical blogs because it's free, integrates with version control, offers automatic deployment, and requires minimal maintenance. It's perfect for developers who want to focus on content rather than infrastructure.
+**Q: What is the difference between GitHub Pages and GitHub?**
+> GitHub is version control. GitHub Pages is the static hosting feature of GitHub. You can have code in GitHub that serves a website via Pages.
 
-### Q2: What is Jekyll and why does GitHub Pages use it?
-**Answer:** Jekyll is a static site generator that converts Markdown into HTML. GitHub Pages uses it because it's fast, secure, and requires no server-side processing. Since there's no database or dynamic code execution, the site is extremely reliable and secure.
+**Q: Why use Jekyll instead of just HTML files?**
+> Jekyll provides templates, includes, and layouts so you don't repeat HTML. One change to header affects all pages. Markdown is faster to write than HTML.
 
-### Q3: Explain the complete flow from writing a post to it appearing online
-**Answer:** 
-1. Write post in Markdown (2026-01-25-title.md)
-2. Add YAML frontmatter with metadata
-3. Push to GitHub repository
-4. GitHub's webhook triggers Jekyll build
-5. Jekyll converts Markdown to HTML
-6. Site files deployed to GitHub's CDN
-7. Post appears at `yourusername.github.io/2026/01/25/title/`
+**Q: How does Jekyll build work?**
+> Jekyll processes Markdown + templates → generates static HTML files → servers these HTML files. No database queries, so it's fast.
 
-### Q4: What are the limitations of GitHub Pages?
-**Answer:** 
-- Only static sites (no server-side code, no databases)
-- Limited to Jekyll plugins (GitHub-approved plugins only)
-- Build time limited (15 minutes max)
-- No server logs available
-- Must be public repository (or paid GitHub Enterprise)
-
-### Q5: How would you automate deploying a custom Jekyll theme?
-**Answer:** You can commit the theme files to your repository. GitHub Pages will use your custom CSS and layouts instead of the default theme. For advanced builds, you could use GitHub Actions to run custom build scripts before deployment.
-
-### Q6: Why should developers document their learning journey in a blog?
-**Answer:** 
-- Reinforces learning through teaching
-- Builds professional portfolio
-- Helps others solve similar problems
-- Improves communication skills
-- Creates searchable knowledge base
-- Attracts job and collaboration opportunities
+**Q: Can you make dynamic sites with GitHub Pages?**
+> Not directly. GitHub Pages serves static HTML. For dynamic features, use JavaScript on the client-side or use an external API.
 
 ---
 
-## 🎯 Next Steps
+## Summary
 
-**You now know:**
-- ✅ How GitHub Pages works
-- ✅ Why it's perfect for technical blogs
-- ✅ The complete setup process
-- ✅ How to create and publish posts
-- ✅ Common mistakes to avoid
+✅ Created GitHub repository  
+✅ Set up Jekyll locally  
+✅ Created first blog post  
+✅ Configured site metadata  
+✅ Tested locally  
+✅ Published to GitHub  
 
-**In the next part of this series, we'll cover:**
-- 🔧 Advanced Jekyll configuration
-- 🎨 Custom styling and themes
-- 📱 Responsive design
-- 🚀 Performance optimization
-- 📊 SEO and analytics
+**Your blog is live and version-controlled!**
+
+Next post: We'll customize the design, add themes, and make it truly yours.
 
 ---
 
-## 📚 Resources
+**Happy blogging! 📝**
 
-- **Official Documentation**: https://docs.github.com/en/pages
-- **Jekyll Documentation**: https://jekyllrb.com/docs/
-- **GitHub Pages Troubleshooting**: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/troubleshooting-jekyll-build-errors-for-github-pages-sites
-- **Markdown Guide**: https://www.markdownguide.org/
+*Have questions or issues? Check the [Jekyll docs](https://jekyllrb.com/docs/) or GitHub Pages help.*
 
 ---
 
-## 💡 Key Takeaways
-
-1. **GitHub Pages is FREE** - No hosting costs ever
-2. **Jekyll automates HTML generation** - Write Markdown, Jekyll handles the rest
-3. **Deployment is automatic** - Push to GitHub, site updates in 1-2 minutes
-4. **Version control included** - Track every change to your blog
-5. **Professional appearance** - Looks like a real website
-6. **Perfect for developers** - Git workflow feels natural
-
----
-
-**Happy blogging! 🚀**
-
-*In Part 2, we'll dive into advanced customization, custom themes, and styling your blog to look professional.*
-
----
-
-*Read the next parts in this series:*
-- [Part 1: Building a GitHub Pages Blog: From Zero to Production (You are here)](/)
-- [Part 2: Advanced Jekyll Configuration & Custom Styling (Coming Soon)](#)
-- [Part 3: Designing Your Blog for SEO & Performance (Coming Soon)](#)
-- [Part 4: Scaling Your Blog with Multiple Authors & Categories (Coming Soon)](#)
-- [Part 5: Troubleshooting Common Issues - Real-World Scenarios (Coming Soon)](#)
+**Series:**
+- Part 1: From Zero to Published (Basics) ← You are here
+- Part 2: Customization & Themes (Coming soon)
+- Part 3: Advanced Features (Coming soon)
+- Part 4: Performance & SEO (Coming soon)
