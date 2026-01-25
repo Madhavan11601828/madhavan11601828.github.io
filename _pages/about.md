@@ -159,6 +159,13 @@ permalink: /about/
     line-height: 1.6;
   }
 
+  .timeline-item li strong {
+    color: #333;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+
   /* Skills Section */
   .skills-container {
     display: grid;
@@ -266,7 +273,9 @@ permalink: /about/
   .award-card p {
     margin: 0;
     font-size: 0.95em;
-    opacity: 0.95;
+    opacity: 1;
+    font-weight: 500;
+    line-height: 1.6;
   }
 
   /* Publications Section */
@@ -393,6 +402,58 @@ permalink: /about/
     .stats-container {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+
+  /* Dark Mode Support */
+  [data-theme="dark"] .about-hero {
+    background: linear-gradient(135deg, #7c8ff5 0%, #9b6bb9 100%);
+  }
+
+  [data-theme="dark"] .timeline-item li strong {
+    color: #e8e8e8;
+  }
+
+  [data-theme="dark"] .timeline-item li {
+    color: #b0b0b0;
+  }
+
+  [data-theme="dark"] .award-card {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  }
+
+  [data-theme="dark"] .award-card p {
+    color: white;
+    opacity: 1;
+  }
+
+  [data-theme="dark"] .section-header h2 {
+    color: #e8e8e8;
+  }
+
+  [data-theme="dark"] .section-header {
+    border-bottom-color: #7c8ff5;
+  }
+
+  [data-theme="dark"] .summary-box {
+    background: linear-gradient(135deg, rgba(124, 143, 245, 0.1) 0%, rgba(155, 107, 185, 0.1) 100%);
+    color: #b0b0b0;
+    border-left-color: #7c8ff5;
+  }
+
+  [data-theme="dark"] .timeline-item h3 {
+    color: #7c8ff5;
+  }
+
+  [data-theme="dark"] .timeline-item .position {
+    color: #e8e8e8;
+  }
+
+  [data-theme="dark"] .timeline-item .company {
+    color: #9b6bb9;
+  }
+
+  [data-theme="dark"] .timeline-item .duration {
+    color: #808080;
   }
 </style>
 
