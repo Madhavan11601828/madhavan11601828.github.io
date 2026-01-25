@@ -467,8 +467,6 @@ permalink: /about/
   <div class="contact-links">
     <a href="mailto:venumangenamadhavan@gmail.com">📧 Email</a>
     <a href="https://linkedin.com/in/mangenavenumadhavan" target="_blank">🔗 LinkedIn</a>
-    <a href="https://github.com" target="_blank">💻 GitHub</a>
-    <a href="tel:+919872193538">📱 +91-9872193538</a>
   </div>
 </div>
 
@@ -773,6 +771,6 @@ permalink: /about/
     <a href="https://linkedin.com/in/mangenavenumadhavan" target="_blank" class="cta-button">Connect on LinkedIn</a>
   </div>
   <p style="margin-bottom: 0; margin-top: 25px; font-size: 0.95em; opacity: 0.9;">
-    📍 Based in Hyderabad, India | ☎️ +91-9872193538
+    📍 Based in Hyderabad, India
   </p>
 </div>

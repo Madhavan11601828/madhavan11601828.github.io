@@ -148,16 +148,16 @@ layout: default
     <h2 class="section-title"> Let''s Connect</h2>
     
     <div class="connect-grid">
-      <a href="https://github.com/madhavan11601828" class="connect-card" target="_blank" rel="noopener">
-        <span class="connect-icon"></span>
-        <h3>GitHub</h3>
-        <p>Check out my projects and contributions</p>
-      </a>
-      
       <a href="mailto:venumangenamadhavan@gmail.com" class="connect-card">
         <span class="connect-icon"></span>
         <h3>Email</h3>
         <p>Get in touch for collaborations</p>
+      </a>
+      
+      <a href="https://linkedin.com/in/mangenavenumadhavan" class="connect-card" target="_blank" rel="noopener">
+        <span class="connect-icon"></span>
+        <h3>LinkedIn</h3>
+        <p>Connect with me professionally</p>
       </a>
     </div>
   </div>
