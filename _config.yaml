@@ -1,6 +1,5 @@
 title: Mangena Venu Madhavan
 description: Generative AI | Data Science | Agentic AI
-theme: jekyll-theme-leap-day
 author: Mangena Venu Madhavan
 email: venumangenamadhavan@gmail.com
 logo: /assets/images/Logo.png
@@ -20,3 +19,4 @@ collections:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
