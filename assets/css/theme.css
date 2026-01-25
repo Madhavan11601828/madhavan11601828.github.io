@@ -460,3 +460,216 @@ body.theme-switching * {
     color: black;
   }
 }
+
+/* ============================================
+   NAVIGATION COMPONENT STYLING
+   ============================================ */
+
+.site-nav {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+/* Brand Logo */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  padding: 5px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.nav-brand:hover {
+  color: var(--accent-primary);
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-text {
+  display: none;
+  font-size: 0.95em;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* Navigation Link */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-size: 0.95em;
+  font-weight: 500;
+}
+
+.nav-text {
+  display: inline;
+  opacity: 1;
+}
+
+/* Hover effect */
+.nav-item:hover .nav-link {
+  background: var(--bg-secondary);
+  color: var(--accent-primary);
+}
+
+/* Active Link */
+.nav-link.active {
+  background: var(--accent-primary);
+  color: white;
+}
+
+/* Hamburger Menu (Mobile) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2.5px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-container {
+    height: 55px;
+    padding: 0 15px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 250px;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 0;
+    font-size: 0.95em;
+  }
+
+  .nav-item:hover .nav-link {
+    padding: 14px 15px;
+  }
+
+  .brand-text {
+    display: inline;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    height: 50px;
+    padding: 0 12px;
+  }
+
+  .nav-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nav-menu {
+    top: 50px;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 0.9em;
+    padding: 12px 12px;
+  }
+
+  .nav-toggle span {
+    width: 20px;
+  }
+}
+
