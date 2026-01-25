@@ -6,6 +6,17 @@ email: venumangenamadhavan@gmail.com
 logo: /assets/images/Logo.png
 social_media_links:
   github: madhavan11601828
+
+# Include pages from _pages folder
+include:
+  - _pages
+
+# Collections for custom pages
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
