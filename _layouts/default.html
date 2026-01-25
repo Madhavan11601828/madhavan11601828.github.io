@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Theme CSS (Must be loaded early to prevent flash) -->
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    
+    <!-- Default Jekyll Theme CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- SEO Tags -->
+    {% seo %}
+</head>
+<body>
+    <!-- Theme toggle button will be added by JavaScript -->
+    
+    <main>
+        {{ content }}
+    </main>
+    
+    <!-- Theme Toggle Script (runs immediately) -->
+    <script src="/assets/js/theme.js"></script>
+    
+    <!-- Google Analytics or other scripts can go here -->
+    {% if site.google_analytics %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '{{ site.google_analytics }}');
+        </script>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,450 @@
+/* ============================================
+   THEME SYSTEM - DARK MODE & LIGHT MODE
+   ============================================ */
+
+:root {
+  /* Light Mode (Default) Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f0f2f5;
+  
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
+  
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: rgba(0, 0, 0, 0.15);
+  
+  --accent-primary: #667eea;
+  --accent-secondary: #764ba2;
+  
+  --link-color: #667eea;
+  --link-hover: #764ba2;
+  
+  --code-bg: #f5f5f5;
+  --code-text: #d63384;
+  
+  --highlight-bg: #fffacd;
+  --highlight-text: #333333;
+  
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3a3a3a;
+  
+  --text-primary: #e8e8e8;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #808080;
+  
+  --border-color: #404040;
+  --border-light: #2d2d2d;
+  
+  --card-bg: #252525;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: rgba(0, 0, 0, 0.5);
+  
+  --accent-primary: #7c8ff5;
+  --accent-secondary: #9b6bb9;
+  
+  --link-color: #7c8ff5;
+  --link-hover: #9b6bb9;
+  
+  --code-bg: #2d2d2d;
+  --code-text: #ff79c6;
+  
+  --highlight-bg: #3a3a00;
+  --highlight-text: #e8e8e8;
+  
+  --success-color: #52c41a;
+  --error-color: #ff4d4f;
+  --warning-color: #faad14;
+  --info-color: #1890ff;
+}
+
+/* ============================================
+   GLOBAL ELEMENTS THEMING
+   ============================================ */
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+  background-color: var(--bg-primary);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Borders */
+hr {
+  border-color: var(--border-color);
+}
+
+/* Cards and Containers */
+.card,
+.post-card,
+.skill-category,
+.timeline-item,
+.education-item,
+.topic-card,
+.pillar-nav-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Code Blocks */
+code,
+pre {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--card-bg);
+}
+
+th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px;
+  color: var(--text-secondary);
+}
+
+tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--accent-primary);
+  background-color: var(--bg-secondary);
+  padding: 12px 20px;
+  margin: 20px 0;
+  color: var(--text-secondary);
+  border-radius: 4px;
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-secondary);
+}
+
+.btn-secondary {
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-secondary);
+}
+
+.btn-outline {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+/* Inputs and Forms */
+input,
+textarea,
+select {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: var(--card-bg);
+  border-color: var(--accent-primary);
+  outline: none;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Section Backgrounds */
+.section-title {
+  color: var(--text-primary);
+}
+
+.featured-section,
+.posts-section {
+  background-color: var(--bg-primary);
+}
+
+/* Hero Section */
+.homepage-hero {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON STYLING
+   ============================================ */
+
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  box-shadow: 0 4px 15px var(--card-shadow-hover);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  color: white;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px var(--card-shadow-hover);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .theme-toggle {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2em;
+  }
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS FOR THEME CHANGES
+   ============================================ */
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Disable transitions during theme change for smooth UX */
+body.theme-switching * {
+  transition: none;
+}
+
+/* ============================================
+   SPECIAL ELEMENT THEMING
+   ============================================ */
+
+/* Award Cards */
+.award-card {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+}
+
+/* Stat Cards */
+.stat-card {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+}
+
+/* Timeline */
+.timeline::before {
+  background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary), var(--accent-primary));
+}
+
+.timeline-item::before {
+  border-color: var(--accent-primary);
+}
+
+/* Skill Cards */
+.skill-category {
+  border-top-color: var(--accent-primary);
+}
+
+.skill-category h4 {
+  color: var(--accent-primary);
+}
+
+/* Education Items */
+.education-item {
+  border-left-color: var(--accent-primary);
+}
+
+.education-item .institution {
+  color: var(--accent-secondary);
+}
+
+/* Section Headers */
+.section-header {
+  border-bottom-color: var(--accent-primary);
+}
+
+.section-header::before {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+}
+
+.section-header h2 {
+  color: var(--text-primary);
+}
+
+/* Summary Box */
+.summary-box {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-left-color: var(--accent-primary);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .summary-box {
+  background: linear-gradient(135deg, rgba(124, 143, 245, 0.1) 0%, rgba(155, 107, 185, 0.1) 100%);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+}
+
+/* About Hero */
+.about-hero {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+}
+
+.about-hero .contact-links a {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+}
+
+.about-hero .contact-links a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================
+   SOCIAL MEDIA & EXTERNAL LINKS
+   ============================================ */
+
+.connect-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.connect-card:hover {
+  border-color: var(--accent-primary);
+  background-color: var(--bg-secondary);
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .theme-toggle {
+    display: none;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+}
