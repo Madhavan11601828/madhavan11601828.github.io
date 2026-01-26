@@ -20,7 +20,7 @@ layout: default
     <div class="hero-cta">
       <a href="/about/" class="btn btn-primary">Learn About Me</a>
       <a href="#pillars-section" class="btn btn-secondary">Explore Learning Pillars</a>
-      <a href="#featured-posts" class="btn btn-tertiary">Read Latest Articles</a>
+      <a href="/blog/" class="btn btn-tertiary">Blog</a>
     </div>
   </div>
 </div>
@@ -29,7 +29,7 @@ layout: default
 <section id="pillars-section" class="pillars-nav-section">
   <div class="container">
     <div class="pillars-header">
-      <h2>📚 Your AI Learning Journey</h2>
+      <h2>📚 Core Learning Pathways</h2>
       <p>Master AI progressively through 7 interconnected pillars, from foundations to autonomous agents</p>
     </div>
 
@@ -98,33 +98,37 @@ layout: default
     <h2 class="section-title"> Latest Articles</h2>
     
     <div class="posts-grid">
-      {% for post in site.posts limit:6 %}
-        <article class="post-card">
-          <div class="post-meta">
-            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-            {% if post.tags %}
-              <div class="post-tags">
-                {% for tag in post.tags limit:2 %}
-                  <span class="tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-          </div>
-          
-          <h3 class="post-title">
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h3>
-          
-          <p class="post-excerpt">
-            {{ post.content | strip_html | truncatewords: 30 }}
-          </p>
-          
-          <a href="{{ post.url }}" class="read-more">Read Article </a>
-        </article>
+      {% assign fifteenDaysAgo = site.time | date: "%s" | minus: 1296000 %}
+      {% for post in site.posts %}
+        {% assign postTime = post.date | date: "%s" %}
+        {% if postTime > fifteenDaysAgo %}
+          <article class="post-card">
+            <div class="post-meta">
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+              {% if post.tags %}
+                <div class="post-tags">
+                  {% for tag in post.tags limit:2 %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+            
+            <h3 class="post-title">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+            
+            <p class="post-excerpt">
+              {{ post.content | strip_html | truncatewords: 30 }}
+            </p>
+            
+            <a href="{{ post.url }}" class="read-more">Read Article </a>
+          </article>
+        {% endif %}
       {% endfor %}
     </div>
     
-    {% if site.posts.size > 6 %}
+    {% if site.posts.size > 0 %}
       <div class="view-all">
         <a href="/blog" class="btn btn-outline">View All Articles</a>
       </div>

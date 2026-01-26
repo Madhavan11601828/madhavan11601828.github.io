@@ -1,5 +1,5 @@
 <!-- Navigation Component -->
-<nav class="site-nav">
+<nav class="site-nav" id="siteNav">
   <div class="nav-container">
     <!-- Logo / Home Link -->
     <a href="/" class="nav-brand">
@@ -45,8 +45,16 @@
   document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
+    const siteNav = document.getElementById('siteNav');
     
     if (!navToggle || !navMenu) return;
+
+    // Hide navigation on home page
+    const currentPath = window.location.pathname;
+    if (currentPath === '/') {
+      siteNav.style.display = 'none';
+      return;
+    }
 
     // Toggle menu on click
     navToggle.addEventListener('click', function() {
@@ -71,7 +79,6 @@
     });
 
     // Set active link based on current page
-    const currentPath = window.location.pathname;
     document.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('href');
       // Match path or home
