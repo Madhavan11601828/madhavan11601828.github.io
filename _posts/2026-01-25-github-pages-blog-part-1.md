@@ -2,6 +2,7 @@
 title: "Building a GitHub Pages Blog - Part 1: From Zero to Published (Basics)"
 author: "Mangena Venu Madhavan"
 date: 2026-01-25
+layout: post
 categories: [blog-development, github-pages, jekyll]
 tags: [github-pages, jekyll, blog, static-site-generator, beginners]
 ---

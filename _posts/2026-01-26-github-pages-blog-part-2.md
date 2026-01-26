@@ -2,6 +2,7 @@
 title: "Building a GitHub Pages Blog - Part 2: Customization & Design"
 author: "Mangena Venu Madhavan"
 date: 2026-01-26
+layout: post
 categories: [blog-development, github-pages, jekyll]
 tags: [jekyll-themes, customization, css, design, github-pages]
 ---

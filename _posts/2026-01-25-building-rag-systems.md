@@ -2,6 +2,7 @@
 title: "Building Production-Ready RAG Systems with LangChain"
 author: "Mangena Venu Madhavan"
 date: 2026-01-25
+layout: post
 tags: [Generative AI, RAG, LangChain, LLM, AI Architecture]
 ---
 
