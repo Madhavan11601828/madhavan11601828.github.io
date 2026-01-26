@@ -172,13 +172,13 @@ layout: default
 <style>
 /* Hero Section */
 .homepage-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   color: white;
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
   margin-bottom: 60px;
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .hero-content {
@@ -187,16 +187,16 @@ layout: default
 }
 
 .logo-container {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   animation: float 3s ease-in-out infinite;
 }
 
 .hero-logo {
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 5px solid white;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   object-fit: cover;
 }
 

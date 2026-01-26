@@ -6,20 +6,101 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="{{ site.author }}">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#5a67d8">
     
     <!-- Base CSS (must load before theme) -->
     <link rel="stylesheet" href="/assets/css/style.css?v=1">
     
     <!-- Theme CSS with dark mode support -->
-    <link rel="stylesheet" href="/assets/css/theme.css?v=3">
+    <link rel="stylesheet" href="/assets/css/theme.css?v=4">
     
     <!-- SEO Tags -->
     {% seo %}
+    
+    <style>
+        /* Page Header with Logo */
+        .page-header {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 10px 30px var(--card-shadow-hover);
+        }
+
+        .page-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-header-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-header h1 {
+            font-size: 2.5em;
+            margin: 15px 0;
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .page-header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin: 10px 0 0 0;
+        }
+
+        /* Hide header on home page */
+        .page-header {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 30px 20px;
+                margin-bottom: 25px;
+            }
+
+            .page-header-logo {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 15px;
+            }
+
+            .page-header h1 {
+                font-size: 1.8em;
+            }
+
+            .page-header p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Component -->
     {% include navigation.html %}
+    
+    <!-- Page Header (hidden on home page) -->
+    {% if page.url != "/" %}
+    <div class="page-header">
+        <div class="page-header-content">
+            <img src="/assets/images/Logo.png" alt="Logo" class="page-header-logo">
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+        </div>
+    </div>
+    {% endif %}
     
     <main>
         {{ content }}
