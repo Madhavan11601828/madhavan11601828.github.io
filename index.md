@@ -98,10 +98,12 @@ layout: default
     <h2 class="section-title"> Latest Articles</h2>
     
     <div class="posts-grid">
-      {% assign fifteenDaysAgo = site.time | date: "%s" | minus: 1296000 %}
+      {% assign currentDate = site.time | date: "%Y-%m-%d" %}
+      {% assign currentDateUnix = site.time | date: "%s" | plus: 0 %}
       {% for post in site.posts %}
-        {% assign postTime = post.date | date: "%s" %}
-        {% if postTime > fifteenDaysAgo %}
+        {% assign postDateUnix = post.date | date: "%s" | plus: 0 %}
+        {% assign daysDiff = currentDateUnix | minus: postDateUnix | divided_by: 86400 %}
+        {% if daysDiff <= 15 %}
           <article class="post-card">
             <div class="post-meta">
               <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
