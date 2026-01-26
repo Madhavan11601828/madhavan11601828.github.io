@@ -683,4 +683,33 @@ layout: default
     grid-column: 1;
   }
 }
+
+/* Sparkle Effect */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.hero-logo {
+  position: relative;
+  animation: float 3s ease-in-out infinite, sparkle 3s ease-in-out infinite;
+}
+
+.hero-logo::before,
+.hero-logo::after {
+  content: '✨';
+  position: absolute;
+  font-size: 1.5em;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.hero-logo::before {
+  top: -10px;
+  right: 10px;
+}
+
+.hero-logo::after {
+  bottom: 10px;
+  right: -15px;
+}
 </style>
