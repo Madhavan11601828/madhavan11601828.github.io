@@ -3,83 +3,83 @@
    ============================================ */
 
 :root {
-  /* Light Mode (Default) Colors - Logo inspired: Gold, Warm Blue, Gold Fire */
-  --bg-primary: #ffffff;
-  --bg-secondary: #faf8f5;
-  --bg-tertiary: #f5f1ed;
+  /* Light Mode (Default) - Modern, clean aesthetic with excellent contrast */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f2f5;
   
   --text-primary: #1a1a1a;
-  --text-secondary: #555555;
-  --text-tertiary: #888888;
+  --text-secondary: #424242;
+  --text-tertiary: #757575;
   
-  --border-color: #e8dcc8;
-  --border-light: #f0ebe2;
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
   
   --card-bg: #ffffff;
-  --card-shadow: rgba(212, 175, 55, 0.08);
-  --card-shadow-hover: rgba(212, 175, 55, 0.15);
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: rgba(0, 0, 0, 0.12);
   
-  --accent-primary: #d4af37;
-  --accent-secondary: #c9a227;
-  --accent-tertiary: #ffd700;
+  /* Modern color palette - Indigo, Teal, Orange */
+  --accent-primary: #4f46e5;
+  --accent-secondary: #7c3aed;
+  --accent-tertiary: #06b6d4;
   
-  --accent-blue: #5da3e6;
-  --accent-fire: #ff8c00;
-  --accent-gold: #ffd700;
+  --accent-blue: #3b82f6;
+  --accent-fire: #f97316;
+  --accent-gold: #10b981;
   
-  --link-color: #d4af37;
-  --link-hover: #c9a227;
+  --link-color: #4f46e5;
+  --link-hover: #7c3aed;
   
-  --code-bg: #faf8f5;
-  --code-text: #d4af37;
+  --code-bg: #f3f4f6;
+  --code-text: #4f46e5;
   
-  --highlight-bg: #fef9e7;
+  --highlight-bg: #fef3c7;
   --highlight-text: #1a1a1a;
   
   --success-color: #10b981;
   --error-color: #ef4444;
   --warning-color: #f59e0b;
-  --info-color: #5da3e6;
+  --info-color: #3b82f6;
 }
 
-/* Dark Mode Colors - Gold, Warm Blue, Gold Fire theme */
+/* Dark Mode - Enhanced contrast for better readability */
 [data-theme="dark"] {
-  --bg-primary: #0a0804;
-  --bg-secondary: #15110b;
-  --bg-tertiary: #1f1810;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
   
-  --text-primary: #faf8f5;
-  --text-secondary: #d9cec0;
-  --text-tertiary: #b8a896;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
   
-  --border-color: #3a3226;
-  --border-light: #2a2218;
+  --border-color: #475569;
+  --border-light: #334155;
   
-  --card-bg: #15110b;
-  --card-shadow: rgba(212, 175, 55, 0.15);
-  --card-shadow-hover: rgba(212, 175, 55, 0.25);
+  --card-bg: #1e293b;
+  --card-shadow: rgba(15, 23, 42, 0.3);
+  --card-shadow-hover: rgba(15, 23, 42, 0.5);
   
-  --accent-primary: #d4af37;
-  --accent-secondary: #e6c547;
-  --accent-tertiary: #ffd700;
+  /* Modern color palette - Brighter variants for dark mode */
+  --accent-primary: #818cf8;
+  --accent-secondary: #a78bfa;
+  --accent-tertiary: #22d3ee;
   
-  --accent-blue: #7eb3ef;
-  --accent-fire: #ff9933;
-  --accent-gold: #ffd700;
+  --accent-blue: #60a5fa;
+  --accent-fire: #fb923c;
+  --accent-gold: #34d399;
   
-  --link-color: #e6c547;
-  --link-hover: #ffd700;
+  --link-color: #818cf8;
+  --link-hover: #a78bfa;
   
-  --code-bg: #15110b;
-  --code-text: #e6c547;
+  --code-bg: #334155;
+  --code-text: #93c5fd;
   
-  --highlight-bg: #2a2218;
-  --highlight-text: #faf8f5;
+  --highlight-bg: #3f3f00;
+  --highlight-text: #f8fafc;
   
-  --success-color: #34d399;
+  --success-color: #4ade80;
   --error-color: #f87171;
-  --warning-color: #ffd700;
-  --info-color: #7eb3ef;
   --warning-color: #fbbf24;
   --info-color: #60a5fa;
 }
@@ -307,14 +307,19 @@ nav {
 
 /* Hero Section */
 .homepage-hero {
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-tertiary) 100%);
   color: white;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -326,20 +331,23 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .hero-logo {
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border: 5px solid white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), inset 0 0 0 2px rgba(255, 255, 255, 0.2);
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
 }
 
 .hero-logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 .hero-title {
@@ -376,7 +384,8 @@ nav {
 /* Responsive Hero */
 @media (max-width: 768px) {
   .homepage-hero {
-    padding: 40px 15px;
+    padding: 50px 15px;
+    min-height: 500px;
   }
   
   .hero-content {
@@ -384,9 +393,9 @@ nav {
   }
   
   .hero-logo {
-    width: 250px;
-    height: 250px;
-    border-width: 3px;
+    width: 240px;
+    height: 240px;
+    border-width: 4px;
   }
   
   .hero-title {
@@ -394,7 +403,7 @@ nav {
   }
   
   .hero-subtitle {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
   
   .hero-description {
@@ -408,21 +417,22 @@ nav {
 
 @media (max-width: 480px) {
   .homepage-hero {
-    padding: 30px 10px;
+    padding: 40px 10px;
+    min-height: auto;
   }
   
   .hero-logo {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-width: 3px;
   }
   
   .hero-title {
-    font-size: 2em;
+    font-size: 1.8em;
   }
   
   .hero-subtitle {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   
   .hero-description {
