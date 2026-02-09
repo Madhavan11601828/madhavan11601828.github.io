@@ -20,3 +20,5 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# GitHub Pages settings
+future: false
