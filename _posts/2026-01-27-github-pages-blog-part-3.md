@@ -44,10 +44,12 @@ Every post in `_posts/` is in the `posts` collection.
 Liquid is a template language Jekyll uses:
 
 ```liquid
+{% raw %}
 {% for post in site.posts %}
   <h2>{{ post.title }}</h2>
   <p>{{ post.excerpt }}</p>
 {% endfor %}
+{% endraw %}
 ```
 
 **Common Liquid tags:**
@@ -83,6 +85,8 @@ Create `_layouts/category.html`:
 layout: default
 ---
 
+```html
+{% raw %}
 <header class="page-header">
   <h1>Category: {{ page.category }}</h1>
   <p class="description">
@@ -111,6 +115,7 @@ layout: default
     {% endfor %}
   {% endif %}
 </div>
+{% endraw %}
 ```
 
 #### Step 2: Create Categories Page
@@ -124,6 +129,8 @@ title: Categories
 permalink: /categories/
 ---
 
+```html
+{% raw %}
 <h1>All Categories</h1>
 
 <div class="categories-grid">
@@ -142,6 +149,7 @@ permalink: /categories/
     </div>
   {% endfor %}
 </div>
+{% endraw %}
 ```
 
 #### Step 3: Generate Category Pages
@@ -149,6 +157,7 @@ permalink: /categories/
 Create `_plugins/category_generator.rb`:
 
 ```ruby
+{% raw %}
 module Jekyll
   class CategoryPage < Page
     def initialize(site, base, dir, category)
@@ -176,6 +185,7 @@ module Jekyll
     end
   end
 end
+{% endraw %}
 ```
 
 #### Step 4: Update _config.yml
@@ -202,10 +212,7 @@ Similar to categories, but for tags:
 Create `_layouts/tag.html`:
 
 ```html
----
-layout: default
----
-
+{% raw %}
 <header class="page-header">
   <h1>Tag: #{{ page.tag }}</h1>
 </header>
@@ -227,6 +234,7 @@ layout: default
     {% endfor %}
   {% endif %}
 </div>
+{% endraw %}
 ```
 
 #### Step 2: Create Tags Page
@@ -234,12 +242,7 @@ layout: default
 Create `_pages/tags.html`:
 
 ```html
----
-layout: default
-title: Tags
-permalink: /tags/
----
-
+{% raw %}
 <h1>All Tags</h1>
 
 <div class="tags-cloud">
@@ -253,6 +256,7 @@ permalink: /tags/
     </a>
   {% endfor %}
 </div>
+{% endraw %}
 ```
 
 #### Step 3: Create Tag Generator Plugin
@@ -260,6 +264,7 @@ permalink: /tags/
 Create `_plugins/tag_generator.rb`:
 
 ```ruby
+{% raw %}
 module Jekyll
   class TagPage < Page
     def initialize(site, base, dir, tag)
@@ -287,6 +292,7 @@ module Jekyll
     end
   end
 end
+{% endraw %}
 ```
 
 ---
@@ -298,12 +304,7 @@ end
 Create `_pages/archive.html`:
 
 ```html
----
-layout: default
-title: Archive
-permalink: /archive/
----
-
+{% raw %}
 <h1>Blog Archive</h1>
 
 <div class="archive">
@@ -329,6 +330,7 @@ permalink: /archive/
     </section>
   {% endfor %}
 </div>
+{% endraw %}
 ```
 
 ---
@@ -342,6 +344,7 @@ permalink: /archive/
 Create `_includes/navigation.html`:
 
 ```html
+{% raw %}
 <nav class="site-nav">
   <ul>
     <li><a href="/">Home</a></li>
@@ -351,6 +354,7 @@ Create `_includes/navigation.html`:
     <li><a href="/about/">About</a></li>
   </ul>
 </nav>
+{% endraw %}
 ```
 
 #### Use in Layout
@@ -358,7 +362,9 @@ Create `_includes/navigation.html`:
 Edit `_layouts/default.html` to include:
 
 ```html
+{% raw %}
 {% include navigation.html %}
+{% endraw %}
 ```
 
 #### Style the Nav
@@ -403,14 +409,7 @@ paginate_path: "/blog/page:num/"
 Create `_pages/blog.html`:
 
 ```html
----
-layout: default
-title: Blog
-permalink: /blog/
-pagination:
-  enabled: true
----
-
+{% raw %}
 <h1>Blog Posts</h1>
 
 <div class="posts-grid">
@@ -438,6 +437,7 @@ pagination:
     {% endif %}
   </nav>
 {% endif %}
+{% endraw %}
 ```
 
 ---
