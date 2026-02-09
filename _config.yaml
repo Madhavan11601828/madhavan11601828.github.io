@@ -22,3 +22,10 @@ plugins:
 
 # GitHub Pages settings
 future: false
+theme: null
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
