@@ -45,10 +45,10 @@ Liquid is a template language Jekyll uses:
 
 ```liquid
 {% raw %}
-{% for post in site.posts %}
-  <h2>{{ post.title }}</h2>
-  <p>{{ post.excerpt }}</p>
-{% endfor %}
+&#123;% for post in site.posts %&#125;
+  <h2>&#123;&#123; post.title &#125;&#125;</h2>
+  <p>&#123;&#123; post.excerpt &#125;&#125;</p>
+&#123;% endfor %&#125;
 {% endraw %}
 ```
 
@@ -88,32 +88,32 @@ layout: default
 ```html
 {% raw %}
 <header class="page-header">
-  <h1>Category: {{ page.category }}</h1>
+  <h1>Category: &#123;&#123; page.category &#125;&#125;</h1>
   <p class="description">
-    Exploring {{ page.category | replace: "-", " " | capitalize }}
+    Exploring &#123;&#123; page.category | replace: "-", " " | capitalize &#125;&#125;
   </p>
 </header>
 
 <div class="posts-list">
-  {% assign posts = site.posts | where: "categories", page.category %}
+  &#123;% assign posts = site.posts | where: "categories", page.category %&#125;
   
-  {% if posts.size == 0 %}
+  &#123;% if posts.size == 0 %&#125;
     <p>No posts in this category yet.</p>
-  {% else %}
-    {% for post in posts %}
+  &#123;% else %&#125;
+    &#123;% for post in posts %&#125;
       <article class="post-summary">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="&#123;&#123; post.url &#125;&#125;">&#123;&#123; post.title &#125;&#125;</a></h2>
         <div class="post-meta">
-          <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-          {% if post.author %}
-            <span class="post-author">by {{ post.author }}</span>
-          {% endif %}
+          <span class="post-date">&#123;&#123; post.date | date: "%B %d, %Y" &#125;&#125;</span>
+          &#123;% if post.author %&#125;
+            <span class="post-author">by &#123;&#123; post.author &#125;&#125;</span>
+          &#123;% endif %&#125;
         </div>
-        <p>{{ post.excerpt }}</p>
-        <a href="{{ post.url }}" class="read-more">Read more →</a>
+        <p>&#123;&#123; post.excerpt &#125;&#125;</p>
+        <a href="&#123;&#123; post.url &#125;&#125;" class="read-more">Read more →</a>
       </article>
-    {% endfor %}
-  {% endif %}
+    &#123;% endfor %&#125;
+  &#123;% endif %&#125;
 </div>
 {% endraw %}
 ```
@@ -134,20 +134,20 @@ permalink: /categories/
 <h1>All Categories</h1>
 
 <div class="categories-grid">
-  {% assign categories = site.posts | map: "categories" | join: "," | split: "," | uniq %}
+  &#123;% assign categories = site.posts | map: "categories" | join: "," | split: "," | uniq %&#125;
   
-  {% for category in categories %}
-    {% assign posts_count = site.posts | where: "categories", category | size %}
+  &#123;% for category in categories %&#125;
+    &#123;% assign posts_count = site.posts | where: "categories", category | size %&#125;
     
     <div class="category-card">
       <h3>
-        <a href="/categories/{{ category | slugify }}/">
-          {{ category | replace: "-", " " | capitalize }}
+        <a href="/categories/&#123;&#123; category | slugify &#125;&#125;/">
+          &#123;&#123; category | replace: "-", " " | capitalize &#125;&#125;
         </a>
       </h3>
-      <p class="post-count">{{ posts_count }} post{{ posts_count | pluralize }}</p>
+      <p class="post-count">&#123;&#123; posts_count &#125;&#125; post&#123;&#123; posts_count | pluralize &#125;&#125;</p>
     </div>
-  {% endfor %}
+  &#123;% endfor %&#125;
 </div>
 {% endraw %}
 ```
@@ -214,25 +214,25 @@ Create `_layouts/tag.html`:
 ```html
 {% raw %}
 <header class="page-header">
-  <h1>Tag: #{{ page.tag }}</h1>
+  <h1>Tag: #&#123;&#123; page.tag &#125;&#125;</h1>
 </header>
 
 <div class="posts-list">
-  {% assign posts = site.posts | where_exp: "post", "post.tags contains page.tag" %}
+  &#123;% assign posts = site.posts | where_exp: "post", "post.tags contains page.tag" %&#125;
   
-  {% if posts.size == 0 %}
+  &#123;% if posts.size == 0 %&#125;
     <p>No posts with this tag.</p>
-  {% else %}
-    {% for post in posts %}
+  &#123;% else %&#125;
+    &#123;% for post in posts %&#125;
       <article class="post-summary">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="&#123;&#123; post.url &#125;&#125;">&#123;&#123; post.title &#125;&#125;</a></h2>
         <div class="post-meta">
-          <span>{{ post.date | date: "%B %d, %Y" }}</span>
+          <span>&#123;&#123; post.date | date: "%B %d, %Y" &#125;&#125;</span>
         </div>
-        <p>{{ post.excerpt }}</p>
+        <p>&#123;&#123; post.excerpt &#125;&#125;</p>
       </article>
-    {% endfor %}
-  {% endif %}
+    &#123;% endfor %&#125;
+  &#123;% endif %&#125;
 </div>
 {% endraw %}
 ```
@@ -246,15 +246,15 @@ Create `_pages/tags.html`:
 <h1>All Tags</h1>
 
 <div class="tags-cloud">
-  {% assign tags = site.posts | map: "tags" | join: "," | split: "," | uniq %}
+  &#123;% assign tags = site.posts | map: "tags" | join: "," | split: "," | uniq %&#125;
   
-  {% for tag in tags %}
-    {% assign posts_count = site.posts | where_exp: "post", "post.tags contains tag" | size %}
+  &#123;% for tag in tags %&#125;
+    &#123;% assign posts_count = site.posts | where_exp: "post", "post.tags contains tag" | size %&#125;
     
-    <a href="/tags/{{ tag | slugify }}/" class="tag-cloud-item" style="font-size: {{ posts_count | times: 20 | plus: 70 }}%;">
-      {{ tag }} <span class="count">({{ posts_count }})</span>
+    <a href="/tags/&#123;&#123; tag | slugify &#125;&#125;/" class="tag-cloud-item" style="font-size: &#123;&#123; posts_count | times: 20 | plus: 70 &#125;&#125;%;">
+      &#123;&#123; tag &#125;&#125; <span class="count">(&#123;&#123; posts_count &#125;&#125;)</span>
     </a>
-  {% endfor %}
+  &#123;% endfor %&#125;
 </div>
 {% endraw %}
 ```
@@ -308,27 +308,27 @@ Create `_pages/archive.html`:
 <h1>Blog Archive</h1>
 
 <div class="archive">
-  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  &#123;% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %&#125;
   
-  {% for year in posts_by_year %}
+  &#123;% for year in posts_by_year %&#125;
     <section class="archive-year">
-      <h2 class="year">{{ year.name }}</h2>
+      <h2 class="year">&#123;&#123; year.name &#125;&#125;</h2>
       
-      {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
+      &#123;% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%B'" %&#125;
       
-      {% for month in posts_by_month %}
-        <h3 class="month">{{ month.name }}</h3>
+      &#123;% for month in posts_by_month %&#125;
+        <h3 class="month">&#123;&#123; month.name &#125;&#125;</h3>
         <ul class="posts-in-month">
-          {% for post in month.items %}
+          &#123;% for post in month.items %&#125;
             <li>
-              <span class="date">{{ post.date | date: "%d" }}</span>
-              <a href="{{ post.url }}">{{ post.title }}</a>
+              <span class="date">&#123;&#123; post.date | date: "%d" &#125;&#125;</span>
+              <a href="&#123;&#123; post.url &#125;&#125;">&#123;&#123; post.title &#125;&#125;</a>
             </li>
-          {% endfor %}
+          &#123;% endfor %&#125;
         </ul>
-      {% endfor %}
+      &#123;% endfor %&#125;
     </section>
-  {% endfor %}
+  &#123;% endfor %&#125;
 </div>
 {% endraw %}
 ```
@@ -363,7 +363,7 @@ Edit `_layouts/default.html` to include:
 
 ```html
 {% raw %}
-{% include navigation.html %}
+&#123;% include navigation.html %&#125;
 {% endraw %}
 ```
 
@@ -413,30 +413,30 @@ Create `_pages/blog.html`:
 <h1>Blog Posts</h1>
 
 <div class="posts-grid">
-  {% for post in paginator.posts %}
+  &#123;% for post in paginator.posts %&#125;
     <article class="post-card">
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-      <p>{{ post.excerpt }}</p>
-      <a href="{{ post.url }}" class="read-more">Read more →</a>
+      <h2><a href="&#123;&#123; post.url &#125;&#125;">&#123;&#123; post.title &#125;&#125;</a></h2>
+      <p class="post-meta">&#123;&#123; post.date | date: "%B %d, %Y" &#125;&#125;</p>
+      <p>&#123;&#123; post.excerpt &#125;&#125;</p>
+      <a href="&#123;&#123; post.url &#125;&#125;" class="read-more">Read more →</a>
     </article>
-  {% endfor %}
+  &#123;% endfor %&#125;
 </div>
 
 <!-- Pagination Links -->
-{% if paginator.total_pages > 1 %}
+&#123;% if paginator.total_pages > 1 %&#125;
   <nav class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="prev">← Previous</a>
-    {% endif %}
+    &#123;% if paginator.previous_page %&#125;
+      <a href="&#123;&#123; paginator.previous_page_path &#125;&#125;" class="prev">← Previous</a>
+    &#123;% endif %&#125;
     
-    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    <span class="page-number">Page &#123;&#123; paginator.page &#125;&#125; of &#123;&#123; paginator.total_pages &#125;&#125;</span>
     
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Next →</a>
-    {% endif %}
+    &#123;% if paginator.next_page %&#125;
+      <a href="&#123;&#123; paginator.next_page_path &#125;&#125;" class="next">Next →</a>
+    &#123;% endif %&#125;
   </nav>
-{% endif %}
+&#123;% endif %&#125;
 {% endraw %}
 ```
 
