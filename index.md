@@ -237,7 +237,7 @@ layout: default
   background: white;
   padding: 25px 20px;
   border-radius: 10px;
-  border-top: 4px solid #667eea;
+  border-top: 4px solid var(--accent-primary);
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
@@ -267,14 +267,14 @@ layout: default
 
 .pillar-nav-card h4 {
   font-size: 1.1em;
-  color: var(--text-primary);
+  color: #1a1a1a;
   margin: 10px 0;
   font-weight: 700;
 }
 
 .pillar-nav-card p {
   font-size: 0.9em;
-  color: var(--text-secondary);
+  color: #424242;
   margin: 10px 0 15px 0;
   line-height: 1.5;
   flex-grow: 1;
