@@ -3,79 +3,83 @@
    ============================================ */
 
 :root {
-  /* Light Mode (Default) Colors - Logo inspired: Orange, Warm Blue, Gold Sparkles */
+  /* Light Mode (Default) Colors - Logo inspired: Gold, Warm Blue, Gold Fire */
   --bg-primary: #ffffff;
-  --bg-secondary: #fef9f5;
-  --bg-tertiary: #fdf5f0;
+  --bg-secondary: #faf8f5;
+  --bg-tertiary: #f5f1ed;
   
   --text-primary: #1a1a1a;
   --text-secondary: #555555;
   --text-tertiary: #888888;
   
-  --border-color: #ffe4d0;
-  --border-light: #fff0e8;
+  --border-color: #e8dcc8;
+  --border-light: #f0ebe2;
   
   --card-bg: #ffffff;
-  --card-shadow: rgba(255, 140, 50, 0.08);
-  --card-shadow-hover: rgba(255, 140, 50, 0.15);
+  --card-shadow: rgba(212, 175, 55, 0.08);
+  --card-shadow-hover: rgba(212, 175, 55, 0.15);
   
-  --accent-primary: #ff8c32;
-  --accent-secondary: #ff6b35;
-  --accent-tertiary: #f7931e;
+  --accent-primary: #d4af37;
+  --accent-secondary: #c9a227;
+  --accent-tertiary: #ffd700;
   
-  --accent-blue: #3b82f6;
-  --accent-gold: #fbbf24;
+  --accent-blue: #5da3e6;
+  --accent-fire: #ff8c00;
+  --accent-gold: #ffd700;
   
-  --link-color: #ff8c32;
-  --link-hover: #ff6b35;
+  --link-color: #d4af37;
+  --link-hover: #c9a227;
   
-  --code-bg: #fef9f5;
-  --code-text: #ff6b35;
+  --code-bg: #faf8f5;
+  --code-text: #d4af37;
   
-  --highlight-bg: #fef3c7;
+  --highlight-bg: #fef9e7;
   --highlight-text: #1a1a1a;
   
   --success-color: #10b981;
   --error-color: #ef4444;
   --warning-color: #f59e0b;
-  --info-color: #3b82f6;
+  --info-color: #5da3e6;
 }
 
-/* Dark Mode Colors - Orange, Blue, Gold theme */
+/* Dark Mode Colors - Gold, Warm Blue, Gold Fire theme */
 [data-theme="dark"] {
-  --bg-primary: #0f0f0f;
-  --bg-secondary: #1a1410;
-  --bg-tertiary: #2a2015;
+  --bg-primary: #0a0804;
+  --bg-secondary: #15110b;
+  --bg-tertiary: #1f1810;
   
-  --text-primary: #fef9f5;
-  --text-secondary: #e0d4c8;
+  --text-primary: #faf8f5;
+  --text-secondary: #d9cec0;
   --text-tertiary: #b8a896;
   
-  --border-color: #4a3a2a;
-  --border-light: #3a2a1a;
+  --border-color: #3a3226;
+  --border-light: #2a2218;
   
-  --card-bg: #1a1410;
-  --card-shadow: rgba(255, 140, 50, 0.15);
-  --card-shadow-hover: rgba(255, 140, 50, 0.25);
+  --card-bg: #15110b;
+  --card-shadow: rgba(212, 175, 55, 0.15);
+  --card-shadow-hover: rgba(212, 175, 55, 0.25);
   
-  --accent-primary: #ff8c32;
-  --accent-secondary: #ffa855;
-  --accent-tertiary: #ffc070;
+  --accent-primary: #d4af37;
+  --accent-secondary: #e6c547;
+  --accent-tertiary: #ffd700;
   
-  --accent-blue: #60a5fa;
-  --accent-gold: #fbbf24;
+  --accent-blue: #7eb3ef;
+  --accent-fire: #ff9933;
+  --accent-gold: #ffd700;
   
-  --link-color: #ffa855;
-  --link-hover: #ffb870;
+  --link-color: #e6c547;
+  --link-hover: #ffd700;
   
-  --code-bg: #1a1410;
-  --code-text: #ffb870;
+  --code-bg: #15110b;
+  --code-text: #e6c547;
   
-  --highlight-bg: #3a2a1a;
-  --highlight-text: #fef9f5;
+  --highlight-bg: #2a2218;
+  --highlight-text: #faf8f5;
   
   --success-color: #34d399;
   --error-color: #f87171;
+  --warning-color: #ffd700;
+  --info-color: #7eb3ef;
   --warning-color: #fbbf24;
   --info-color: #60a5fa;
 }
@@ -218,14 +222,14 @@ blockquote {
   background-color: var(--accent-primary);
   color: white;
   border: 2px solid var(--accent-primary);
-  box-shadow: 0 4px 12px rgba(255, 140, 50, 0.3);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
 .btn-primary:hover {
   background-color: var(--accent-secondary);
   border-color: var(--accent-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 140, 50, 0.4);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
 }
 
 .btn-secondary {
@@ -264,7 +268,7 @@ blockquote {
   background-color: var(--accent-primary);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 140, 50, 0.3);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
 /* Inputs and Forms */

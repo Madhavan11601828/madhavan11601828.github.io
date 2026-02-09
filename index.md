@@ -684,7 +684,7 @@ layout: default
   }
 }
 
-/* Sparkle Effect */
+/* Sparkle Effect - Gold Fire */
 @keyframes sparkle {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.6; }
@@ -701,6 +701,7 @@ layout: default
   position: absolute;
   font-size: 1.5em;
   animation: sparkle 2s ease-in-out infinite;
+  color: #ff8c00;
 }
 
 .hero-logo::before {
