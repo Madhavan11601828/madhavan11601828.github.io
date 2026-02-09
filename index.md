@@ -212,14 +212,14 @@ layout: default
 
 .pillars-header h2 {
   font-size: 2.5em;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 15px;
   font-weight: 700;
 }
 
 .pillars-header p {
   font-size: 1.1em;
-  color: #666;
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -267,21 +267,21 @@ layout: default
 
 .pillar-nav-card h4 {
   font-size: 1.1em;
-  color: #333;
+  color: var(--text-primary);
   margin: 10px 0;
   font-weight: 700;
 }
 
 .pillar-nav-card p {
   font-size: 0.9em;
-  color: #666;
+  color: var(--text-secondary);
   margin: 10px 0 15px 0;
   line-height: 1.5;
   flex-grow: 1;
 }
 
 .pillar-nav-card .arrow {
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 700;
   transition: transform 0.3s ease;
   margin-top: 10px;
@@ -395,7 +395,7 @@ layout: default
   font-weight: 700;
   text-align: center;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .topics-grid {
@@ -406,17 +406,17 @@ layout: default
 }
 
 .topic-card {
-  background: white;
+  background: var(--card-bg);
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px var(--card-shadow);
   transition: all 0.3s ease;
 }
 
 .topic-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px var(--card-shadow-hover);
 }
 
 .topic-icon {
@@ -427,11 +427,11 @@ layout: default
 .topic-card h3 {
   font-size: 1.3em;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .topic-card p {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
