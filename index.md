@@ -98,39 +98,33 @@ layout: default
     <h2 class="section-title"> Latest Articles</h2>
     
     <div class="posts-grid">
-      {% assign currentDate = site.time | date: "%Y-%m-%d" %}
-      {% assign currentDateUnix = site.time | date: "%s" | plus: 0 %}
-      {% for post in site.posts %}
-        {% assign postDateUnix = post.date | date: "%s" | plus: 0 %}
-        {% assign daysDiff = currentDateUnix | minus: postDateUnix | divided_by: 86400 %}
-        {% if daysDiff <= 15 %}
-          <article class="post-card">
-            <div class="post-meta">
-              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-              {% if post.tags %}
-                <div class="post-tags">
-                  {% for tag in post.tags limit:2 %}
-                    <span class="tag">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
-            </div>
-            
-            <h3 class="post-title">
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </h3>
-            
-            <p class="post-excerpt">
-              {{ post.content | strip_html | truncatewords: 30 }}
-            </p>
-            
-            <a href="{{ post.url }}" class="read-more">Read Article </a>
-          </article>
-        {% endif %}
+      {% for post in site.posts limit:6 %}
+        <article class="post-card">
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            {% if post.tags %}
+              <div class="post-tags">
+                {% for tag in post.tags limit:2 %}
+                  <span class="tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+          
+          <h3 class="post-title">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h3>
+          
+          <p class="post-excerpt">
+            {{ post.content | strip_html | truncatewords: 30 }}
+          </p>
+          
+          <a href="{{ post.url }}" class="read-more">Read Article </a>
+        </article>
       {% endfor %}
     </div>
     
-    {% if site.posts.size > 0 %}
+    {% if site.posts.size > 6 %}
       <div class="view-all">
         <a href="/blog" class="btn btn-outline">View All Articles</a>
       </div>
