@@ -103,12 +103,12 @@ layout: default
 <!-- Learning Planner Button Section -->
 <section class="planner-button-section">
   <div class="container">
-    <a href="/pillars/" class="btn btn-planner btn-large">View Complete Learning Planner</a>
-    <p class="planner-description">
-      Master artificial intelligence through a structured, progressive curriculum. 
-      Each pillar builds on the previous one, with concepts, code, visuals, and real-world applications. 
-      From Python fundamentals to agentic AI—a comprehensive roadmap to AI mastery.
-    </p>
+    <div class="planner-content">
+      <a href="/pillars/" class="btn btn-planner-light">View Complete Learning Planner</a>
+      <p class="planner-description">
+        Master artificial intelligence through a structured, progressive curriculum. Each pillar builds on the previous one, with concepts, code, visuals, and real-world applications.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -381,32 +381,44 @@ layout: default
   font-size: 1.1em;
 }
 
-.btn-planner {
+.planner-button-section {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.planner-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-planner-light {
   background: white;
-  color: #333;
+  color: #0891b2;
+  padding: 12px 35px;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.btn-planner:hover {
-  background: #f8f9fa;
+.btn-planner-light:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.planner-button-section {
-  padding: 40px 20px;
-  text-align: center;
-  background: white;
+  background: #f0f9fa;
 }
 
 .planner-description {
-  margin-top: 20px;
-  color: #666;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.95);
   font-size: 0.95em;
   line-height: 1.6;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .pillars-view-all {
