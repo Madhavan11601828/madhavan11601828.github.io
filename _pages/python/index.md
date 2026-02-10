@@ -458,355 +458,18 @@ After mastering Python, you'll be ready for:
 </style>
 
 <script>
-// Content ID to file mapping
+// Content ID to file path and section mapping
 const contentMapping = {
-  'basics-variables': 'Variables, Data Types & Basic Operations',
-  'basics-control-flow': 'Control Flow: Conditionals & Loops',
-  'preint-functions': 'Functions & Code Organization',
-  'preint-datastructures': 'Data Structures: Lists, Tuples & Dictionaries',
-  'int-oop': 'Object-Oriented Programming Fundamentals',
-  'int-error-handling': 'Error Handling & Exceptions',
-  'postint-decorators': 'Decorators & Function Wrappers',
-  'postint-modules': 'Modules, Packages & Imports',
-  'adv-context-managers': 'Context Managers & With Statements',
-  'adv-metaclasses': 'Advanced OOP: Metaclasses & Descriptors'
-};
-
-// Python content snippets (extracted from markdown files)
-const pythonContent = {
-  'basics-variables': `
-    <h2>Variables, Data Types & Basic Operations</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Variable creation and naming conventions</li>
-      <li>Python's built-in data types (int, float, str, bool)</li>
-      <li>Type checking and conversion</li>
-      <li>Basic arithmetic and string operations</li>
-      <li>Comments and code style</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Variables:</strong> Variables in Python are labels that reference objects in memory. Unlike some languages, Python doesn't require explicit type declaration.</p>
-    <pre><code>name = "John"      # String
-age = 25           # Integer
-height = 5.9       # Float
-is_student = True  # Boolean</code></pre>
-    <p><strong>Dynamic Typing:</strong> Python automatically infers the type of a variable based on the value assigned to it. You can check the type using the <code>type()</code> function.</p>
-    <pre><code>x = 10
-print(type(x))     # &lt;class 'int'&gt;
-x = "Hello"
-print(type(x))     # &lt;class 'str'&gt;</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Create variables for your name, age, and height. Print them with appropriate messages.</p>
-    <p>2. Convert string numbers to integers and perform calculations.</p>
-    <p>3. Explore string concatenation and formatting using f-strings.</p>
-    <p><strong>Tip:</strong> Always use meaningful variable names that describe the data they contain. Follow PEP 8 naming conventions (lowercase with underscores for multi-word names).</p>
-  `,
-  'basics-control-flow': `
-    <h2>Control Flow: Conditionals & Loops</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>If, elif, and else statements</li>
-      <li>Comparison and logical operators</li>
-      <li>For loops and iteration</li>
-      <li>While loops and loop control</li>
-      <li>Break, continue, and pass statements</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Conditionals (If Statements):</strong> Allow your code to make decisions based on conditions.</p>
-    <pre><code>age = 15
-if age >= 18:
-    print("You are an adult")
-elif age >= 13:
-    print("You are a teenager")
-else:
-    print("You are a child")</code></pre>
-    <p><strong>For Loops:</strong> Used to iterate over sequences like lists, strings, or ranges.</p>
-    <pre><code>for i in range(5):
-    print(i)  # Prints 0, 1, 2, 3, 4
-
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    print(fruit)</code></pre>
-    <p><strong>While Loops:</strong> Continue executing as long as a condition is true.</p>
-    <pre><code>count = 0
-while count < 3:
-    print(count)
-    count += 1</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Create a program that checks if a number is even or odd.</p>
-    <p>2. Use a for loop to print the multiplication table of a given number.</p>
-    <p>3. Write a while loop that counts down from 10 to 1.</p>
-  `,
-  'preint-functions': `
-    <h2>Functions & Code Organization</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Function definition with def keyword</li>
-      <li>Parameters and return values</li>
-      <li>Default arguments and keyword arguments</li>
-      <li>Variable scope and globals</li>
-      <li>Docstrings and function documentation</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Function Definition:</strong> Functions allow you to organize code into reusable blocks.</p>
-    <pre><code>def greet(name):
-    """Greet a person by name."""
-    return f"Hello, {name}!"
-
-message = greet("Alice")
-print(message)  # Output: Hello, Alice!</code></pre>
-    <p><strong>Default Arguments:</strong> You can specify default values for parameters.</p>
-    <pre><code>def power(base, exponent=2):
-    return base ** exponent
-
-print(power(3))        # 9 (uses default exponent=2)
-print(power(3, 3))     # 27 (uses exponent=3)</code></pre>
-    <p><strong>Variable Scope:</strong> Variables have different scopes - local (inside function) or global (entire program).</p>
-    <h3>Practice Exercises</h3>
-    <p>1. Write a function that calculates the factorial of a number.</p>
-    <p>2. Create a function with multiple parameters and default values.</p>
-    <p>3. Practice using return values to chain function calls.</p>
-  `,
-  'preint-datastructures': `
-    <h2>Data Structures: Lists, Tuples & Dictionaries</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Lists and list methods</li>
-      <li>List comprehensions</li>
-      <li>Tuples and immutability</li>
-      <li>Dictionaries and key-value pairs</li>
-      <li>Set operations</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Lists:</strong> Ordered, mutable collections that can contain any type of data.</p>
-    <pre><code>fruits = ["apple", "banana", "cherry"]
-fruits.append("date")
-print(fruits)  # ["apple", "banana", "cherry", "date"]
-
-numbers = [1, 2, 3, 4, 5]
-squares = [x**2 for x in numbers]  # List comprehension
-print(squares)  # [1, 4, 9, 16, 25]</code></pre>
-    <p><strong>Dictionaries:</strong> Unordered collections of key-value pairs.</p>
-    <pre><code>person = {
-    "name": "John",
-    "age": 25,
-    "city": "New York"
-}
-print(person["name"])  # John
-person["age"] = 26</code></pre>
-    <p><strong>Tuples:</strong> Immutable sequences that can't be modified after creation.</p>
-    <pre><code>coordinates = (10, 20)
-# This would cause an error: coordinates[0] = 15</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Create and manipulate lists with various methods.</p>
-    <p>2. Use list comprehensions to process data efficiently.</p>
-    <p>3. Create nested dictionaries and access nested values.</p>
-  `,
-  'int-oop': `
-    <h2>Object-Oriented Programming Fundamentals</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Classes and objects</li>
-      <li>Attributes and methods</li>
-      <li>The __init__ constructor method</li>
-      <li>Inheritance and method overriding</li>
-      <li>Polymorphism and duck typing</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Classes and Objects:</strong> A class is a blueprint for creating objects.</p>
-    <pre><code>class Dog:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-    
-    def bark(self):
-        return f"{self.name} says: Woof!"
-
-my_dog = Dog("Buddy", 3)
-print(my_dog.bark())  # Buddy says: Woof!</code></pre>
-    <p><strong>Inheritance:</strong> Create new classes based on existing ones.</p>
-    <pre><code>class Animal:
-    def speak(self):
-        pass
-
-class Cat(Animal):
-    def speak(self):
-        return "Meow!"</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Create a class representing a real-world object.</p>
-    <p>2. Practice inheritance by creating subclasses.</p>
-    <p>3. Override methods to customize behavior.</p>
-  `,
-  'int-error-handling': `
-    <h2>Error Handling & Exceptions</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Try-except blocks</li>
-      <li>Different exception types</li>
-      <li>Catching specific exceptions</li>
-      <li>The finally block</li>
-      <li>Creating custom exceptions</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Try-Except Block:</strong> Handle errors gracefully without crashing.</p>
-    <pre><code>try:
-    number = int(input("Enter a number: "))
-    result = 10 / number
-except ValueError:
-    print("Invalid input! Please enter a number.")
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
-except Exception as e:
-    print(f"An error occurred: {e}")</code></pre>
-    <p><strong>Finally Block:</strong> Code that always runs, whether an exception occurred or not.</p>
-    <pre><code>try:
-    file = open("data.txt", "r")
-finally:
-    file.close()  # Always executed</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Write code that catches multiple different exceptions.</p>
-    <p>2. Create a custom exception class.</p>
-    <p>3. Practice using finally blocks for cleanup.</p>
-  `,
-  'postint-decorators': `
-    <h2>Decorators & Function Wrappers</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Function decorators concept</li>
-      <li>Creating simple decorators</li>
-      <li>Decorators with arguments</li>
-      <li>Class decorators</li>
-      <li>Built-in decorators (@property, @staticmethod)</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Decorators:</strong> Functions that modify other functions or classes.</p>
-    <pre><code>def my_decorator(func):
-    def wrapper():
-        print("Something before the function call")
-        func()
-        print("Something after the function call")
-    return wrapper
-
-@my_decorator
-def say_hello():
-    print("Hello!")
-
-say_hello()</code></pre>
-    <p><strong>Decorators with Arguments:</strong> Pass additional parameters to decorators.</p>
-    <pre><code>def repeat(times):
-    def decorator(func):
-        def wrapper():
-            for _ in range(times):
-                func()
-        return wrapper
-    return decorator
-
-@repeat(3)
-def say_hi():
-    print("Hi!")</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Create a timing decorator that measures function execution time.</p>
-    <p>2. Build a decorator that logs function calls.</p>
-    <p>3. Create a decorator with parameters.</p>
-  `,
-  'postint-modules': `
-    <h2>Modules, Packages & Imports</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Creating and importing modules</li>
-      <li>Package structure with __init__.py</li>
-      <li>Import statements and variations</li>
-      <li>Relative vs absolute imports</li>
-      <li>The sys.path and module search</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Modules:</strong> Python files containing reusable code.</p>
-    <pre><code># math_utils.py
-def add(a, b):
-    return a + b
-
-# main.py
-import math_utils
-result = math_utils.add(5, 3)</code></pre>
-    <p><strong>Packages:</strong> Directories containing modules and an __init__.py file.</p>
-    <pre><code>mypackage/
-    __init__.py
-    module1.py
-    module2.py
-    
-from mypackage import module1
-from mypackage.module1 import function_name</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Create a simple module and import it in another file.</p>
-    <p>2. Organize code into a package structure.</p>
-    <p>3. Practice different import styles.</p>
-  `,
-  'adv-context-managers': `
-    <h2>Context Managers & With Statements</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Context manager protocol (__enter__ and __exit__)</li>
-      <li>The with statement for resource management</li>
-      <li>The contextlib module</li>
-      <li>Creating custom context managers</li>
-      <li>Exception handling in context managers</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Context Managers:</strong> Ensure setup and cleanup happen properly.</p>
-    <pre><code>with open("file.txt", "r") as file:
-    content = file.read()
-# File is automatically closed, even if an error occurs</code></pre>
-    <p><strong>Custom Context Manager:</strong> Create your own resource management.</p>
-    <pre><code>class DatabaseConnection:
-    def __enter__(self):
-        print("Connecting to database...")
-        return self
-    
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        print("Closing connection...")
-        return False
-
-with DatabaseConnection() as db:
-    print("Using database...")</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Create a context manager for timing code execution.</p>
-    <p>2. Build a context manager for database connections.</p>
-    <p>3. Use contextlib.contextmanager decorator.</p>
-  `,
-  'adv-metaclasses': `
-    <h2>Advanced OOP: Metaclasses & Descriptors</h2>
-    <h3>What You'll Learn</h3>
-    <ul>
-      <li>Descriptors and the descriptor protocol</li>
-      <li>Properties and @property decorator</li>
-      <li>Metaclasses and type()</li>
-      <li>Creating custom metaclasses</li>
-      <li>Advanced inheritance patterns</li>
-    </ul>
-    <h3>Key Concepts</h3>
-    <p><strong>Descriptors:</strong> Control attribute access in classes.</p>
-    <pre><code>class Descriptor:
-    def __get__(self, obj, objtype=None):
-        return "Getting value"
-    
-    def __set__(self, obj, value):
-        print(f"Setting value to {value}")</code></pre>
-    <p><strong>Properties:</strong> Make methods behave like attributes.</p>
-    <pre><code>class Temperature:
-    def __init__(self, celsius):
-        self._celsius = celsius
-    
-    @property
-    def fahrenheit(self):
-        return (self._celsius * 9/5) + 32
-
-t = Temperature(25)
-print(t.fahrenheit)  # 77.0</code></pre>
-    <h3>Practice Exercises</h3>
-    <p>1. Create a descriptor for validated attributes.</p>
-    <p>2. Build properties for computed values.</p>
-    <p>3. Understand and create custom metaclasses.</p>
-  `
+  'basics-variables': { file: 'python1', section: 'Variables and Data Types' },
+  'basics-control-flow': { file: 'python1', section: 'Basic Control Flow' },
+  'preint-functions': { file: 'python2', section: 'Functions' },
+  'preint-datastructures': { file: 'python2', section: 'Lists' },
+  'int-oop': { file: 'python3', section: 'Object-Oriented Programming (OOP)' },
+  'int-error-handling': { file: 'python2', section: 'Exception Handling' },
+  'postint-decorators': { file: 'python3', section: 'Decorators' },
+  'postint-modules': { file: 'python2', section: 'Modules and Packages' },
+  'adv-context-managers': { file: 'python4', section: 'Context Managers' },
+  'adv-metaclasses': { file: 'python5', section: 'Metaclasses' }
 };
 
 function openLearningContent(contentId, title) {
@@ -816,14 +479,36 @@ function openLearningContent(contentId, title) {
   
   modalTitle.textContent = title;
   
-  // Get the content from the mapping
-  if (pythonContent[contentId]) {
-    modalBody.innerHTML = pythonContent[contentId];
+  // Look up which file contains this content
+  const contentRef = contentMapping[contentId];
+  if (contentRef && contentCache[contentRef.file]) {
+    // Extract the section from the full file content
+    const fullContent = contentCache[contentRef.file];
+    const section = extractSection(fullContent, contentRef.section);
+    if (section) {
+      modalBody.innerHTML = section;
+    } else {
+      // If section not found, show full content
+      modalBody.innerHTML = fullContent;
+    }
   } else {
-    modalBody.innerHTML = `<p>Content for <strong>${title}</strong> is being prepared. Please check back soon!</p>`;
+    modalBody.innerHTML = `<p><em>Loading content for <strong>${title}</strong>...</em></p>`;
   }
   
+  // Scroll to top of modal content
+  modalBody.scrollTop = 0;
   modal.classList.add('active');
+}
+
+function extractSection(content, sectionName) {
+  // Extract content from h2/h3 heading to the next h2
+  const regex = new RegExp(`<h[23]>.*?${escapeRegex(sectionName)}.*?<\\/h[23]>(.*?)(?=<h2>|$)`, 'is');
+  const match = content.match(regex);
+  return match ? match[1] : null;
+}
+
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function closeContentModal() {
@@ -837,6 +522,43 @@ document.addEventListener('keydown', function(e) {
     closeContentModal();
   }
 });
+
+// Load content from hidden divs when page loads
+const contentCache = {};
+document.addEventListener('DOMContentLoaded', function() {
+  const python1Content = document.getElementById('python-content-1');
+  const python2Content = document.getElementById('python-content-2');
+  const python3Content = document.getElementById('python-content-3');
+  const python4Content = document.getElementById('python-content-4');
+  const python5Content = document.getElementById('python-content-5');
+  
+  if (python1Content) contentCache['python1'] = python1Content.innerHTML;
+  if (python2Content) contentCache['python2'] = python2Content.innerHTML;
+  if (python3Content) contentCache['python3'] = python3Content.innerHTML;
+  if (python4Content) contentCache['python4'] = python4Content.innerHTML;
+  if (python5Content) contentCache['python5'] = python5Content.innerHTML;
+});
 </script>
+
+<!-- Hidden divs to store full markdown content (loaded via Jekyll includes) -->
+<div id="python-content-1" style="display: none;">
+{% include python/Python/01_Python_Basics.md %}
+</div>
+
+<div id="python-content-2" style="display: none;">
+{% include python/Python/02_Python_Pre_Intermediate.md %}
+</div>
+
+<div id="python-content-3" style="display: none;">
+{% include python/Python/03_Python_Intermediate.md %}
+</div>
+
+<div id="python-content-4" style="display: none;">
+{% include python/Python/04_Python_Post_Intermediate.md %}
+</div>
+
+<div id="python-content-5" style="display: none;">
+{% include python/Python/05_Python_Advanced.md %}
+</div>
 
 *Last updated: 2026-02-10*
