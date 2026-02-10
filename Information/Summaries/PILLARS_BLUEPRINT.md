@@ -8,7 +8,7 @@ You're building a **comprehensive, structured AI learning platform** with 7 inte
 
 ## 📊 The 7 Pillars Structure
 
-### Pillar 1: Data Science Foundations (Base)
+### Pillar 3: Data Analysis
 **Duration:** 4-6 weeks | **Posts:** 12-15
 
 **Topics:**

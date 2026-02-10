@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Data Science Foundations
+title: Data Analysis
 permalink: /foundations/
 ---
 
 <div class="category-hero">
   <div class="container">
     <div class="category-badge">Pillar 1</div>
-    <h1>📊 Data Science Foundations</h1>
+    <h1>📊 Data Analysis</h1>
     <p class="category-subtitle">Your Base Camp for AI Mastery</p>
     <p class="category-description">
       Master Python data analysis, data manipulation, and visualization. 

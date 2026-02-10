@@ -22,7 +22,7 @@ A comprehensive 7-pillar AI learning blog structured progressively from foundati
 
 
 
-1. **Data Science Foundations** - Python, NumPy, Pandas, EDA## 📝 Blog Topics
+1. **Data Analysis** - Python, NumPy, Pandas, EDA## 📝 Blog Topics
 
 2. **Machine Learning** - Supervised & unsupervised learning
 

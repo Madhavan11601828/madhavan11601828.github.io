@@ -79,11 +79,11 @@ permalink: /pillars/
       <a href="/api-development/" class="btn btn-pillar">Explore API Development</a>
     </div>
 
-    <!-- Pillar 3: Data Science Foundations -->
+    <!-- Pillar 3: Data Analysis -->
     <div class="pillar pillar-3">
       <div class="pillar-header">
         <span class="pillar-number">3</span>
-        <h2>📊 Data Science Foundations</h2>
+        <h2>📊 Data Analysis</h2>
       </div>
       <p class="pillar-tagline">Data Analysis Essentials</p>
       <p class="pillar-description">
@@ -337,7 +337,7 @@ permalink: /pillars/
           <span class="timeline-number">3</span>
         </div>
         <div class="timeline-content">
-          <h4>Next: Data Science Foundations</h4>
+          <h4>Next: Data Analysis</h4>
           <p>Master NumPy, Pandas, and data manipulation skills for AI projects.</p>
           <p class="duration">⏱️ 4-6 weeks</p>
         </div>

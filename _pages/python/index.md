@@ -44,7 +44,7 @@ Python is the foundation of modern AI, data science, and web development. This p
 ## Path Forward
 
 After mastering Python, you'll be ready for:
-- **Data Science Foundations** - Use Python for data analysis
+- **Data Analysis** - Use Python for data analysis
 - **API Development** - Build web services with Flask and FastAPI
 - **Machine Learning** - Apply Python to ML projects
 

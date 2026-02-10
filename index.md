@@ -50,7 +50,7 @@ layout: default
 
       <a href="/foundations/" class="pillar-nav-card" style="border-top-color: #FF6B6B;">
         <span class="pillar-icon">📊</span>
-        <h4>Data Science Foundations</h4>
+        <h4>Data Analysis</h4>
         <p>Master Python, NumPy, Pandas & visualization</p>
         <span class="arrow">→</span>
       </a>
