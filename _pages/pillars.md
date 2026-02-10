@@ -488,7 +488,7 @@ permalink: /pillars/
 
 <style>
 .pillars-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -520,12 +520,12 @@ permalink: /pillars/
 }
 
 .pillar {
-  background: white;
-  border-left: 5px solid #667eea;
+  background: var(--card-bg);
+  border-left: 5px solid var(--accent-primary);
   border-radius: 10px;
   padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px var(--card-shadow);
   transition: all 0.3s ease;
 }
 
@@ -561,25 +561,25 @@ permalink: /pillars/
 .pillar-header h2 {
   font-size: 1.8em;
   margin: 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .pillar-tagline {
   font-size: 0.95em;
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 600;
   margin: -10px 0 15px 0;
 }
 
 .pillar-description {
   font-size: 1em;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .pillar-content {
-  background: #f8f9fa;
+  background: var(--bg-tertiary);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -587,7 +587,7 @@ permalink: /pillars/
 
 .pillar-content h4 {
   margin-top: 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .pillar-content ul {
@@ -597,20 +597,21 @@ permalink: /pillars/
 
 .pillar-content li {
   margin: 8px 0;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .use-case {
-  background: white;
+  background: var(--card-bg);
   padding: 15px;
-  border-left: 3px solid #667eea;
+  border-left: 3px solid var(--accent-primary);
   margin-top: 15px;
   border-radius: 4px;
+  color: var(--text-primary);
 }
 
 .btn-pillar {
   display: inline-block;
-  background: #667eea;
+  background: var(--accent-primary);
   color: white;
   padding: 12px 30px;
   border-radius: 25px;
@@ -635,7 +636,7 @@ permalink: /pillars/
   text-align: center;
   font-size: 2.2em;
   margin-bottom: 40px;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .timeline {
@@ -650,7 +651,7 @@ permalink: /pillars/
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background: #667eea;
+  background: var(--accent-primary);
   border-radius: 2px;
 }
 
@@ -680,13 +681,13 @@ permalink: /pillars/
   width: 50px;
   height: 50px;
   background: white;
-  border: 4px solid #667eea;
+  border: 4px solid var(--accent-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  color: #667eea;
+  color: var(--accent-primary);
   font-size: 1.2em;
   z-index: 10;
 }
@@ -700,22 +701,22 @@ permalink: /pillars/
 
 .timeline-content h4 {
   margin-top: 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .timeline-content p {
-  color: #666;
+  color: var(--text-secondary);
   margin: 10px 0;
 }
 
 .duration {
   font-weight: 600;
-  color: #667eea;
+  color: var(--accent-primary);
 }
 
 .timeline-summary {
   text-align: center;
-  background: white;
+  background: var(--card-bg);
   padding: 30px;
   border-radius: 10px;
   margin-top: 40px;
@@ -723,20 +724,20 @@ permalink: /pillars/
 
 .timeline-summary h4 {
   font-size: 1.3em;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 10px;
 }
 
 .blog-format-section {
   padding: 60px 20px;
-  background: white;
+  background: var(--bg-primary);
 }
 
 .blog-format-section h2 {
   text-align: center;
   font-size: 2.2em;
   margin-bottom: 50px;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .format-grid {
@@ -765,12 +766,12 @@ permalink: /pillars/
 }
 
 .format-card h4 {
-  color: #333;
+  color: var(--text-primary);
   margin: 15px 0;
 }
 
 .format-card p {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.95em;
   line-height: 1.5;
 }
