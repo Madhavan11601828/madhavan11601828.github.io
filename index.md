@@ -500,7 +500,7 @@ layout: default
 /* Posts Section */
 .posts-section {
   padding: 60px 20px;
-  background: white;
+  background: var(--bg-primary);
 }
 
 .posts-grid {
@@ -512,12 +512,12 @@ layout: default
 }
 
 .post-card {
-  background: white;
-  border: 1px solid #e0e0e0;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 30px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px var(--card-shadow);
 }
 
 .post-card:hover {
@@ -536,7 +536,7 @@ layout: default
 
 .post-date {
   font-size: 0.9em;
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 600;
 }
 
@@ -548,8 +548,8 @@ layout: default
 
 .tag {
   display: inline-block;
-  background: #f0f0f0;
-  color: #666;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.8em;
@@ -558,21 +558,21 @@ layout: default
 .post-title {
   font-size: 1.4em;
   margin: 15px 0;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .post-title a {
-  color: #333;
+  color: var(--text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .post-title a:hover {
-  color: #667eea;
+  color: var(--accent-primary);
 }
 
 .post-excerpt {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 20px;
 }
