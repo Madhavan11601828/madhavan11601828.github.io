@@ -30,7 +30,7 @@ layout: default
   <div class="container">
     <div class="pillars-header">
       <h2>📚 Core Learning Pathways</h2>
-      <p>Master AI progressively through 7 interconnected pillars, from foundations to autonomous agents</p>
+      <p>Master AI progressively through 9 interconnected pillars, from Python fundamentals to autonomous agents</p>
     </div>
 
     <div class="pillars-quick-nav">
@@ -38,6 +38,20 @@ layout: default
         <span class="pillar-icon">📊</span>
         <h4>Data Science Foundations</h4>
         <p>Master Python, NumPy, Pandas & visualization</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/python/" class="pillar-nav-card" style="border-top-color: #3776AB;">
+        <span class="pillar-icon">🐍</span>
+        <h4>Python Programming</h4>
+        <p>Master Python fundamentals and best practices</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/api-development/" class="pillar-nav-card" style="border-top-color: #009688;">
+        <span class="pillar-icon">🔌</span>
+        <h4>API Development</h4>
+        <p>Flask, FastAPI, and Django for web services</p>
         <span class="arrow">→</span>
       </a>
 
