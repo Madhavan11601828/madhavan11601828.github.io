@@ -81,9 +81,17 @@
     // Set active link based on current page
     document.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('href');
-      // Match path or home
-      if ((href === '/' && currentPath === '/') || 
-          (href !== '/' && currentPath.startsWith(href.split('#')[0]))) {
+      const basePath = href.split('#')[0]; // Get path without hash
+      
+      // Only highlight the exact matching page
+      if (basePath === '/' && currentPath === '/') {
+        // Home page - exact match
+        link.classList.add('active');
+      } else if (basePath !== '/' && basePath !== '' && currentPath === basePath) {
+        // Other pages - exact match only
+        link.classList.add('active');
+      } else if (basePath !== '/' && basePath !== '' && currentPath.startsWith(basePath + '/')) {
+        // Pages with trailing slash or subpages
         link.classList.add('active');
       }
     });
