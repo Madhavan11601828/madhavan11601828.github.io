@@ -104,6 +104,11 @@ layout: default
 <section class="planner-button-section">
   <div class="container">
     <a href="/pillars/" class="btn btn-planner btn-large">View Complete Learning Planner</a>
+    <p class="planner-description">
+      Master artificial intelligence through a structured, progressive curriculum. 
+      Each pillar builds on the previous one, with concepts, code, visuals, and real-world applications. 
+      From Python fundamentals to agentic AI—a comprehensive roadmap to AI mastery.
+    </p>
   </div>
 </section>
 
@@ -392,6 +397,16 @@ layout: default
   padding: 40px 20px;
   text-align: center;
   background: white;
+}
+
+.planner-description {
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.95em;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pillars-view-all {
