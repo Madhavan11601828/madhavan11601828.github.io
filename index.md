@@ -168,26 +168,6 @@ layout: default
   </div>
 </section>
 
-<section class="connect-section">
-  <div class="container">
-    <h2 class="section-title"> Let''s Connect</h2>
-    
-    <div class="connect-grid">
-      <a href="mailto:venumangenamadhavan@gmail.com" class="connect-card">
-        <span class="connect-icon"></span>
-        <h3>Email</h3>
-        <p>Get in touch for collaborations</p>
-      </a>
-      
-      <a href="https://linkedin.com/in/mangenavenumadhavan" class="connect-card" target="_blank" rel="noopener">
-        <span class="connect-icon"></span>
-        <h3>LinkedIn</h3>
-        <p>Connect with me professionally</p>
-      </a>
-    </div>
-  </div>
-</section>
-
 <style>
 /* Hero Section */
 .homepage-hero {
@@ -580,52 +560,6 @@ layout: default
 
 .cta-description {
   margin-bottom: 30px !important;
-}
-
-/* Connect Section */
-.connect-section {
-  padding: 60px 20px;
-  background: #f8f9fa;
-}
-
-.connect-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.connect-card {
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.connect-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
-  border-top: 4px solid #667eea;
-}
-
-.connect-icon {
-  font-size: 3em;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.connect-card h3 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-  color: #667eea;
-}
-
-.connect-card p {
-  color: #666;
-  line-height: 1.6;
 }
 
 /* Responsive */
