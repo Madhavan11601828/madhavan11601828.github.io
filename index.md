@@ -96,11 +96,14 @@ layout: default
         <p>Create autonomous intelligent agents</p>
         <span class="arrow">→</span>
       </a>
-
-      <div class="pillars-view-all">
-        <a href="/pillars/" class="btn btn-primary btn-large">View Complete Learning Planner</a>
-      </div>
     </div>
+  </div>
+</section>
+
+<!-- Learning Planner Button Section -->
+<section class="planner-button-section">
+  <div class="container">
+    <a href="/pillars/" class="btn btn-planner btn-large">View Complete Learning Planner</a>
   </div>
 </section>
 
@@ -371,6 +374,24 @@ layout: default
 .btn-large {
   padding: 16px 50px;
   font-size: 1.1em;
+}
+
+.btn-planner {
+  background: white;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-planner:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.planner-button-section {
+  padding: 40px 20px;
+  text-align: center;
+  background: white;
 }
 
 .pillars-view-all {
