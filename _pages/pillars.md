@@ -6,8 +6,8 @@ permalink: /pillars/
 
 <div class="pillars-hero">
   <div class="container">
-    <h1>🏛️ The 7 Pillars of AI Mastery</h1>
-    <p class="hero-subtitle">A comprehensive roadmap from foundations to agentic AI</p>
+    <h1>🏛️ The 9 Pillars of AI Mastery</h1>
+    <p class="hero-subtitle">A comprehensive roadmap from Python fundamentals to agentic AI</p>
     <p class="hero-description">
       Master artificial intelligence through a structured, progressive curriculum. 
       Each pillar builds on the previous one, with concepts, code, visuals, and real-world applications.
@@ -17,13 +17,75 @@ permalink: /pillars/
 
 <div class="pillars-container">
   <div class="container">
-    <!-- Pillar 1: Data Science Foundations -->
+    <!-- Pillar 1: Python Programming -->
     <div class="pillar pillar-1">
       <div class="pillar-header">
         <span class="pillar-number">1</span>
+        <h2>🐍 Python Programming</h2>
+      </div>
+      <p class="pillar-tagline">Your Foundation</p>
+      <p class="pillar-description">
+        Master Python fundamentals, object-oriented programming, and best practices. 
+        Build a strong foundation for all AI and data science work.
+      </p>
+      
+      <div class="pillar-content">
+        <h4>Topics Covered:</h4>
+        <ul>
+          <li>Python syntax and data types</li>
+          <li>Control flow and functions</li>
+          <li>Object-oriented programming</li>
+          <li>Error handling and debugging</li>
+          <li>Modules and packages</li>
+          <li>Best practices and style</li>
+        </ul>
+        
+        <div class="use-case">
+          <strong>💼 Use Case:</strong> Building reusable Python utilities
+        </div>
+      </div>
+      
+      <a href="/python/" class="btn btn-pillar">Explore Python</a>
+    </div>
+
+    <!-- Pillar 2: API Development -->
+    <div class="pillar pillar-2">
+      <div class="pillar-header">
+        <span class="pillar-number">2</span>
+        <h2>🔌 API Development</h2>
+      </div>
+      <p class="pillar-tagline">Web Services & Integration</p>
+      <p class="pillar-description">
+        Learn Flask, FastAPI, and Django to build scalable web services. 
+        Master REST API design, authentication, and deployment strategies.
+      </p>
+      
+      <div class="pillar-content">
+        <h4>Topics Covered:</h4>
+        <ul>
+          <li>Flask basics and routing</li>
+          <li>FastAPI and async programming</li>
+          <li>Django MVT architecture</li>
+          <li>RESTful API design</li>
+          <li>Authentication and security</li>
+          <li>Deployment and monitoring</li>
+        </ul>
+        
+        <div class="use-case">
+          <strong>💼 Use Case:</strong> Building a data processing API
+        </div>
+      </div>
+      
+      <a href="/api-development/" class="btn btn-pillar">Explore API Development</a>
+    </div>
+
+    <!-- Pillar 3: Data Science Foundations -->
+    <div class="pillar pillar-3">
+      <div class="pillar-header">
+        <span class="pillar-number">3</span>
         <h2>📊 Data Science Foundations</h2>
       </div>
-      <p class="pillar-tagline">Your Base Camp</p>
+      <p class="pillar-tagline">Data Analysis Essentials</p>
       <p class="pillar-description">
         Master Python data analysis, NumPy, Pandas, data cleaning, EDA, and visualization. 
         Learn to extract insights from raw data.
@@ -48,10 +110,10 @@ permalink: /pillars/
       <a href="/foundations/" class="btn btn-pillar">Explore Foundations</a>
     </div>
 
-    <!-- Pillar 2: Machine Learning -->
-    <div class="pillar pillar-2">
+    <!-- Pillar 4: Machine Learning -->
+    <div class="pillar pillar-4">
       <div class="pillar-header">
-        <span class="pillar-number">2</span>
+        <span class="pillar-number">4</span>
         <h2>🤖 Machine Learning</h2>
       </div>
       <p class="pillar-tagline">Core Intelligence</p>
@@ -78,10 +140,10 @@ permalink: /pillars/
       <a href="/machine-learning/" class="btn btn-pillar">Explore ML</a>
     </div>
 
-    <!-- Pillar 3: NLP -->
-    <div class="pillar pillar-3">
+    <!-- Pillar 5: NLP -->
+    <div class="pillar pillar-5">
       <div class="pillar-header">
-        <span class="pillar-number">3</span>
+        <span class="pillar-number">5</span>
         <h2>📝 Natural Language Processing</h2>
       </div>
       <p class="pillar-tagline">Text Intelligence</p>
@@ -109,10 +171,10 @@ permalink: /pillars/
       <a href="/nlp/" class="btn btn-pillar">Explore NLP</a>
     </div>
 
-    <!-- Pillar 4: Computer Vision -->
-    <div class="pillar pillar-4">
+    <!-- Pillar 6: Computer Vision -->
+    <div class="pillar pillar-6">
       <div class="pillar-header">
-        <span class="pillar-number">4</span>
+        <span class="pillar-number">6</span>
         <h2>👁️ Computer Vision</h2>
       </div>
       <p class="pillar-tagline">Image Intelligence</p>
@@ -141,10 +203,10 @@ permalink: /pillars/
       <a href="/computer-vision/" class="btn btn-pillar">Explore CV</a>
     </div>
 
-    <!-- Pillar 5: Deep Learning & Transformers -->
-    <div class="pillar pillar-5">
+    <!-- Pillar 7: Deep Learning & Transformers -->
+    <div class="pillar pillar-7">
       <div class="pillar-header">
-        <span class="pillar-number">5</span>
+        <span class="pillar-number">7</span>
         <h2>🧠 Deep Learning & Transformers</h2>
       </div>
       <p class="pillar-tagline">Advanced Architectures</p>
@@ -173,10 +235,10 @@ permalink: /pillars/
       <a href="/deep-learning/" class="btn btn-pillar">Explore DL</a>
     </div>
 
-    <!-- Pillar 6: Generative AI -->
-    <div class="pillar pillar-6">
+    <!-- Pillar 8: Generative AI -->
+    <div class="pillar pillar-8">
       <div class="pillar-header">
-        <span class="pillar-number">6</span>
+        <span class="pillar-number">8</span>
         <h2>✨ Generative AI & LLMs</h2>
       </div>
       <p class="pillar-tagline">Your Core Brand</p>
@@ -206,10 +268,10 @@ permalink: /pillars/
       <a href="/generative-ai/" class="btn btn-pillar">Explore Gen AI</a>
     </div>
 
-    <!-- Pillar 7: Agentic AI -->
-    <div class="pillar pillar-7">
+    <!-- Pillar 9: Agentic AI -->
+    <div class="pillar pillar-9">
       <div class="pillar-header">
-        <span class="pillar-number">7</span>
+        <span class="pillar-number">9</span>
         <h2>🤖 Agentic AI</h2>
       </div>
       <p class="pillar-tagline">Your Differentiator</p>
@@ -253,8 +315,8 @@ permalink: /pillars/
           <span class="timeline-number">1</span>
         </div>
         <div class="timeline-content">
-          <h4>Start: Data Science Foundations</h4>
-          <p>Build your data manipulation and analysis skills with Python, NumPy, and Pandas.</p>
+          <h4>Start: Python Programming</h4>
+          <p>Build your Python fundamentals and OOP skills. Master the language that powers AI.</p>
           <p class="duration">⏱️ 4-6 weeks</p>
         </div>
       </div>
@@ -264,9 +326,9 @@ permalink: /pillars/
           <span class="timeline-number">2</span>
         </div>
         <div class="timeline-content">
-          <h4>Then: Machine Learning</h4>
-          <p>Master supervised and unsupervised learning algorithms and techniques.</p>
-          <p class="duration">⏱️ 6-8 weeks</p>
+          <h4>Then: API Development</h4>
+          <p>Learn to build scalable web services with Flask, FastAPI, and Django.</p>
+          <p class="duration">⏱️ 4-6 weeks</p>
         </div>
       </div>
       
@@ -275,15 +337,37 @@ permalink: /pillars/
           <span class="timeline-number">3</span>
         </div>
         <div class="timeline-content">
-          <h4>Next: NLP or Computer Vision</h4>
-          <p>Choose your specialization: understand language or images.</p>
-          <p class="duration">⏱️ 4-6 weeks each</p>
+          <h4>Next: Data Science Foundations</h4>
+          <p>Master NumPy, Pandas, and data manipulation skills for AI projects.</p>
+          <p class="duration">⏱️ 4-6 weeks</p>
         </div>
       </div>
       
       <div class="timeline-item">
         <div class="timeline-marker">
           <span class="timeline-number">4</span>
+        </div>
+        <div class="timeline-content">
+          <h4>Then: Machine Learning</h4>
+          <p>Understand supervised and unsupervised learning algorithms in depth.</p>
+          <p class="duration">⏱️ 6-8 weeks</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <span class="timeline-number">5</span>
+        </div>
+        <div class="timeline-content">
+          <h4>Specialization: NLP or Computer Vision</h4>
+          <p>Choose your domain specialization: understand language or images.</p>
+          <p class="duration">⏱️ 4-6 weeks each</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <span class="timeline-number">6</span>
         </div>
         <div class="timeline-content">
           <h4>Foundation: Deep Learning & Transformers</h4>
@@ -294,30 +378,53 @@ permalink: /pillars/
       
       <div class="timeline-item">
         <div class="timeline-marker">
-          <span class="timeline-number">5</span>
+          <span class="timeline-number">7</span>
         </div>
         <div class="timeline-content">
           <h4>Specialization: Generative AI</h4>
-          <p>Master LLMs, prompt engineering, and RAG systems.</p>
+          <p>Master LLMs, prompt engineering, RAG systems, and LangChain.</p>
           <p class="duration">⏱️ 6-8 weeks</p>
         </div>
       </div>
       
       <div class="timeline-item">
         <div class="timeline-marker">
-          <span class="timeline-number">6</span>
+          <span class="timeline-number">8</span>
         </div>
         <div class="timeline-content">
           <h4>Expert Level: Agentic AI</h4>
-          <p>Build autonomous systems that think and act independently.</p>
+          <p>Build autonomous systems that think, plan, and act independently.</p>
           <p class="duration">⏱️ 6-8 weeks</p>
         </div>
       </div>
     </div>
     
     <div class="timeline-summary">
-      <h4>Total Time Investment: 32-42 weeks (~8-10 months)</h4>
-      <p>This is a comprehensive journey from beginner to expert in AI and machine learning.</p>
+      <h4>Total Time Investment: 40-50 weeks (~10-12 months)</h4>
+      <p>This is a comprehensive journey from Python fundamentals to building autonomous AI agents.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Stay Updated Section -->
+<div class="stay-updated-section">
+  <div class="container">
+    <div class="stay-updated-content">
+      <h2>📬 Stay Updated</h2>
+      <p>Get notified when new articles and learning resources are published. Connect with me on LinkedIn to follow my AI journey.</p>
+      
+      <div class="contact-buttons">
+        <a href="mailto:your-email@example.com" class="contact-btn email-btn" title="Send Email">
+          <span class="btn-icon">✉️</span>
+          <span class="btn-text">Email</span>
+        </a>
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn" title="Connect on LinkedIn">
+          <span class="btn-icon">💼</span>
+          <span class="btn-text">LinkedIn</span>
+        </a>
+      </div>
+      
+      <p class="contact-note">I share insights about AI, machine learning, and building intelligent systems. Let's connect!</p>
     </div>
   </div>
 </div>
@@ -434,6 +541,8 @@ permalink: /pillars/
 .pillar-5 { border-left-color: #98D8C8; }
 .pillar-6 { border-left-color: #F7DC6F; }
 .pillar-7 { border-left-color: #BB8FCE; }
+.pillar-8 { border-left-color: #FFB347; }
+.pillar-9 { border-left-color: #87CEEB; }
 
 .pillar-header {
   display: flex;
@@ -664,6 +773,86 @@ permalink: /pillars/
   color: #666;
   font-size: 0.95em;
   line-height: 1.5;
+}
+
+.stay-updated-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.stay-updated-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stay-updated-section h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.stay-updated-section p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-btn:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+  font-size: 1.2em;
+}
+
+.btn-text {
+  font-weight: 600;
+}
+
+.contact-note {
+  font-size: 0.9em;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {

@@ -34,13 +34,6 @@ layout: default
     </div>
 
     <div class="pillars-quick-nav">
-      <a href="/foundations/" class="pillar-nav-card" style="border-top-color: #FF6B6B;">
-        <span class="pillar-icon">📊</span>
-        <h4>Data Science Foundations</h4>
-        <p>Master Python, NumPy, Pandas & visualization</p>
-        <span class="arrow">→</span>
-      </a>
-
       <a href="/python/" class="pillar-nav-card" style="border-top-color: #3776AB;">
         <span class="pillar-icon">🐍</span>
         <h4>Python Programming</h4>
@@ -52,6 +45,13 @@ layout: default
         <span class="pillar-icon">🔌</span>
         <h4>API Development</h4>
         <p>Flask, FastAPI, and Django for web services</p>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/foundations/" class="pillar-nav-card" style="border-top-color: #FF6B6B;">
+        <span class="pillar-icon">📊</span>
+        <h4>Data Science Foundations</h4>
+        <p>Master Python, NumPy, Pandas & visualization</p>
         <span class="arrow">→</span>
       </a>
 
@@ -146,13 +146,24 @@ layout: default
   </div>
 </section>
 
-<section class="cta-section">
+<section class="stay-updated-section">
   <div class="container">
-    <div class="cta-content">
-      <h2>Stay Updated</h2>
-      <p>Get notified about new articles on Generative AI, Agentic Automation, and Data Science</p>
-      <p class="cta-description">Subscribe to the RSS feed to never miss an article.</p>
-      <a href="/feed.xml" class="btn btn-primary">Subscribe to RSS Feed</a>
+    <div class="stay-updated-content">
+      <h2>📬 Stay Updated</h2>
+      <p>Get notified when new articles and learning resources are published. Connect with me on LinkedIn to follow my AI journey.</p>
+      
+      <div class="contact-buttons">
+        <a href="mailto:your-email@example.com" class="contact-btn email-btn" title="Send Email">
+          <span class="btn-icon">✉️</span>
+          <span class="btn-text">Email</span>
+        </a>
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn" title="Connect on LinkedIn">
+          <span class="btn-icon">💼</span>
+          <span class="btn-text">LinkedIn</span>
+        </a>
+      </div>
+      
+      <p class="contact-note">I share insights about AI, machine learning, and building intelligent systems. Let's connect!</p>
     </div>
   </div>
 </section>
@@ -720,5 +731,87 @@ layout: default
 .hero-logo::after {
   bottom: 10px;
   right: -15px;
+}
+
+/* Stay Updated Section */
+.stay-updated-section {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+}
+
+.stay-updated-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stay-updated-section h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.stay-updated-section p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-btn:hover {
+  background: white;
+  color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+  font-size: 1.2em;
+}
+
+.btn-text {
+  font-weight: 600;
+}
+
+.contact-note {
+  font-size: 0.9em;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 </style>
