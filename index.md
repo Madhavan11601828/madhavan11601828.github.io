@@ -97,12 +97,9 @@ layout: default
         <span class="arrow">→</span>
       </a>
 
-      <a href="/pillars/" class="pillar-nav-card pillar-nav-card-full">
-        <span class="pillar-icon">🏛️</span>
-        <h4>View Complete Learning Path</h4>
-        <p>See the full curriculum structure with timelines and roadmaps</p>
-        <span class="arrow">→</span>
-      </a>
+      <div class="pillars-view-all">
+        <a href="/pillars/" class="btn btn-primary btn-large">View Complete Learning Planner</a>
+      </div>
     </div>
   </div>
 </section>
@@ -369,6 +366,18 @@ layout: default
   background: rgba(255, 255, 255, 0.25);
   border-color: white;
   transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 16px 50px;
+  font-size: 1.1em;
+}
+
+.pillars-view-all {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .btn-outline {
