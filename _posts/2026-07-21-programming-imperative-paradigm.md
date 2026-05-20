@@ -6,10 +6,10 @@ tags: [Python, Programming, Beginner, Tutorial]
 categories: [programming]
 series: "Programming"
 article_number: 1
-cover_image: /assets/images/Imperative%20Programming%20Flow/CoverImage.png
+cover_image: /assets/images/Imperative%20Programming%20Flow/CoverImage.webp
 ---
 
-![Imperative Programming: Thinking in Steps and State](/assets/images/Imperative%20Programming%20Flow/CoverImage.png)
+![Imperative Programming: Thinking in Steps and State](/assets/images/Imperative%20Programming%20Flow/CoverImage.webp)
 
 ## Key Takeaways
 
@@ -163,7 +163,7 @@ print(x, y)  # 15 30
 
 At any point you can pause and write down the current values of all variables — that is the program's current state.
 
-![Imperative Programming Flow — State 0 → Instruction 1 → State 1 → Instruction 2 → State 2, with if/else branching into two paths that rejoin at the final state](/assets/images/Imperative%20Programming%20Flow/ImperativeProgrammingFlow.png)
+![Imperative Programming Flow — State 0 → Instruction 1 → State 1 → Instruction 2 → State 2, with if/else branching into two paths that rejoin at the final state](/assets/images/Imperative%20Programming%20Flow/ImperativeProgrammingFlow.webp)
 
 ---
 
@@ -301,7 +301,7 @@ print("Step 5: Highest sale =", highest_amount, "by", highest_name)
 print("Report complete.")
 ```
 
-![Sales Report Script — Step-by-Step State Transformation: each of the 5 steps shown with the data table updating, ending with Total 4250, Average 1062.5, Highest sale 1800 by Carol](/assets/images/Imperative%20Programming%20Flow/SalesReportScript.png)
+![Sales Report Script — Step-by-Step State Transformation: each of the 5 steps shown with the data table updating, ending with Total 4250, Average 1062.5, Highest sale 1800 by Carol](/assets/images/Imperative%20Programming%20Flow/SalesReportScript.webp)
 
 ---
 
