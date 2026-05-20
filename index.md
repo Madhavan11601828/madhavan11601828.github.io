@@ -30,7 +30,7 @@ layout: default
   <div class="container">
     <div class="pillars-header">
       <h2>📚 Core Learning Pathways</h2>
-      <p>Master AI progressively through 9 interconnected pillars, from Python fundamentals to autonomous agents</p>
+      <p>Master AI progressively through 10 interconnected pillars, from Python fundamentals to autonomous agents</p>
     </div>
 
     <div class="pillars-quick-nav">
@@ -96,6 +96,13 @@ layout: default
         <p>Create autonomous intelligent agents</p>
         <span class="arrow">→</span>
       </a>
+
+      <a href="/programming/" class="pillar-nav-card" style="border-top-color: #50C878;">
+        <span class="pillar-icon">💻</span>
+        <h4>Programming</h4>
+        <p>Paradigms, algorithms, data structures &amp; performance</p>
+        <span class="arrow">→</span>
+      </a>
     </div>
   </div>
 </section>
@@ -155,7 +162,7 @@ layout: default
   <div class="container">
     <div class="stay-updated-content">
       <h2>📬 Stay Updated</h2>
-      <p>Follow my AI learning journey. New articles published weekly across 9 learning pillars — from Python to Agentic AI.</p>
+      <p>Follow my AI learning journey. New articles published weekly across 10 learning pillars — from Python to Agentic AI.</p>
       
       <div class="contact-buttons">
         <a href="https://venumadhavan.hashnode.dev" target="_blank" rel="noopener noreferrer" class="contact-btn hashnode-btn" title="Read Articles on Hashnode">

@@ -6,7 +6,7 @@ permalink: /pillars/
 
 <div class="pillars-hero">
   <div class="container">
-    <h1>🏛️ The 9 Pillars of AI Mastery</h1>
+    <h1>🏛️ The 10 Pillars of AI Mastery</h1>
     <p class="hero-subtitle">A comprehensive roadmap from Python fundamentals to agentic AI</p>
     <p class="hero-description">
       Master artificial intelligence through a structured, progressive curriculum. 
@@ -301,6 +301,36 @@ permalink: /pillars/
       
       <a href="/agentic-ai/" class="btn btn-pillar">Explore Agentic AI</a>
     </div>
+
+    <!-- Pillar 10: Programming -->
+    <div class="pillar pillar-10">
+      <div class="pillar-header">
+        <span class="pillar-number">10</span>
+        <h2>💻 Programming</h2>
+      </div>
+      <p class="pillar-tagline">Think Like a Computer Scientist</p>
+      <p class="pillar-description">
+        Go beyond Python syntax — master programming paradigms, data structures, algorithm design techniques,
+        computational models, and data handling styles. The foundation for writing fast, correct, scalable code.
+      </p>
+
+      <div class="pillar-content">
+        <h4>Topics Covered:</h4>
+        <ul>
+          <li>Imperative, OOP, Functional, Declarative, and Logic programming</li>
+          <li>Data structures: Stacks, Queues, Linked Lists, Trees, Graphs, Hash Maps</li>
+          <li>Algorithm design: Brute Force, Divide &amp; Conquer, Greedy, DP, Backtracking</li>
+          <li>Computational models: Threading, Asyncio, Multiprocessing, Distributed</li>
+          <li>Data handling: Iterative, Recursive, Vectorized, Data-Oriented</li>
+        </ul>
+
+        <div class="use-case">
+          <strong>💼 Use Case:</strong> Choosing the right algorithm and data structure for any AI pipeline
+        </div>
+      </div>
+
+      <a href="/programming/" class="btn btn-pillar">Explore Programming</a>
+    </div>
   </div>
 </div>
 
@@ -543,6 +573,7 @@ permalink: /pillars/
 .pillar-7 { border-left-color: #BB8FCE; }
 .pillar-8 { border-left-color: #FFB347; }
 .pillar-9 { border-left-color: #87CEEB; }
+.pillar-10 { border-left-color: #50C878; }
 
 .pillar-header {
   display: flex;
