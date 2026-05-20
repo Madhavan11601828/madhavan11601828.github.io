@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="theme-color" content="#d4af37">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1">
+    <link rel="stylesheet" href="/assets/css/theme.css?v=4">
+    {% seo %}
+
+    <style>
+        .about-topbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-topbar .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .about-topbar .brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.6);
+            object-fit: cover;
+        }
+
+        .about-topbar .hashnode-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            padding: 7px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .about-topbar .hashnode-link:hover {
+            background: rgba(255,255,255,0.28);
+        }
+    </style>
+</head>
+<body>
+    <!-- Minimal top bar: only logo + link back to Hashnode articles -->
+    <div class="about-topbar">
+        <a href="/" class="brand">
+            <img src="/assets/images/Logo.png" alt="Logo">
+            Venu Madhavan
+        </a>
+        <a href="https://venumadhavan.hashnode.dev" target="_blank" rel="noopener noreferrer" class="hashnode-link">
+            📝 Read Articles
+        </a>
+    </div>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <script src="/assets/js/theme.js"></script>
+</body>
+</html>
