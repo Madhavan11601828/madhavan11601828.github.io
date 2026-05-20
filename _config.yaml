@@ -1,10 +1,18 @@
 title: Mangena Venu Madhavan
-description: Generative AI | Data Science | Agentic AI
+description: >-
+  Python Developer & Generative AI Specialist sharing structured AI learning
+  content across Data Science, Machine Learning, NLP, Computer Vision,
+  Deep Learning, Generative AI, and Agentic AI.
 author: Mangena Venu Madhavan
 email: venumangenamadhavan@gmail.com
 logo: /assets/images/Logo.png
+url: "https://madhavan11601828.github.io"
+baseurl: ""
+
 social_media_links:
   github: madhavan11601828
+  linkedin: mangenavenumadhavan
+  hashnode: venumadhavan
 
 # Include pages from _pages folder
 include:

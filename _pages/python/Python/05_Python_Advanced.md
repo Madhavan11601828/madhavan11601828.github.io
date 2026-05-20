@@ -1,3 +1,10 @@
+---
+layout: page
+title: Python Advanced - Level 5
+permalink: /python/advanced/
+description: Advanced Python internals, performance optimization, C extensions, web frameworks, and data science
+---
+
 # Python Advanced - Level 5
 
 **Target Audience:** Advanced developers optimizing and extending Python  

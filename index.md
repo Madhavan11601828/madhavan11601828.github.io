@@ -18,9 +18,9 @@ layout: default
     </p>
 
     <div class="hero-cta">
-      <a href="/about/" class="btn btn-primary">Learn About Me</a>
+      <a href="/about/" class="btn btn-primary">About Me & Resume</a>
+      <a href="https://venumadhavan.hashnode.dev" target="_blank" rel="noopener noreferrer" class="btn btn-hashnode">Read My Articles</a>
       <a href="#pillars-section" class="btn btn-secondary">Explore Learning Pillars</a>
-      <a href="/blog/" class="btn btn-tertiary">Blog</a>
     </div>
   </div>
 </div>
@@ -155,20 +155,24 @@ layout: default
   <div class="container">
     <div class="stay-updated-content">
       <h2>📬 Stay Updated</h2>
-      <p>Get notified when new articles and learning resources are published. Connect with me on LinkedIn to follow my AI journey.</p>
+      <p>Follow my AI learning journey. New articles published weekly across 9 learning pillars — from Python to Agentic AI.</p>
       
       <div class="contact-buttons">
-        <a href="mailto:your-email@example.com" class="contact-btn email-btn" title="Send Email">
-          <span class="btn-icon">✉️</span>
-          <span class="btn-text">Email</span>
+        <a href="https://venumadhavan.hashnode.dev" target="_blank" rel="noopener noreferrer" class="contact-btn hashnode-btn" title="Read Articles on Hashnode">
+          <span class="btn-icon">📝</span>
+          <span class="btn-text">Hashnode Articles</span>
         </a>
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn" title="Connect on LinkedIn">
+        <a href="https://www.linkedin.com/in/mangenavenumadhavan" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn" title="Connect on LinkedIn">
           <span class="btn-icon">💼</span>
           <span class="btn-text">LinkedIn</span>
         </a>
+        <a href="mailto:venumangenamadhavan@gmail.com" class="contact-btn email-btn" title="Send Email">
+          <span class="btn-icon">✉️</span>
+          <span class="btn-text">Email</span>
+        </a>
       </div>
       
-      <p class="contact-note">I share insights about AI, machine learning, and building intelligent systems. Let's connect!</p>
+      <p class="contact-note">Associate Consultant at Infosys | Generative AI & Agentic AI Specialist | Open to collaborations and opportunities</p>
     </div>
   </div>
 </section>
@@ -374,6 +378,20 @@ layout: default
   background: rgba(255, 255, 255, 0.25);
   border-color: white;
   transform: translateY(-2px);
+}
+
+.btn-hashnode {
+  background: #2962FF;
+  color: white;
+  border: 2px solid #2962FF;
+  box-shadow: 0 4px 15px rgba(41, 98, 255, 0.4);
+}
+
+.btn-hashnode:hover {
+  background: #1a4fd6;
+  border-color: #1a4fd6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(41, 98, 255, 0.5);
 }
 
 .btn-large {
@@ -778,6 +796,15 @@ layout: default
   color: #4f46e5;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hashnode-btn {
+  background: rgba(41, 98, 255, 0.2);
+  border-color: #7EB2FF;
+}
+
+.hashnode-btn:hover {
+  color: #2962FF;
 }
 
 .btn-icon {

@@ -1,3 +1,10 @@
+---
+layout: page
+title: Python Pre-Intermediate - Level 2
+permalink: /python/pre-intermediate/
+description: Build real programs with data structures, functions, file operations, and error handling
+---
+
 # Python Pre-Intermediate - Level 2
 
 **Target Audience:** Those who completed basics and want to build real programs  

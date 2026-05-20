@@ -1,3 +1,10 @@
+---
+layout: page
+title: Python Basics - Level 1
+permalink: /python/basics/
+description: Master Python fundamentals for complete beginners - variables, data types, control flow, and basic operations
+---
+
 # Python Basics - Level 1
 
 **Target Audience:** Complete beginners with no programming experience  

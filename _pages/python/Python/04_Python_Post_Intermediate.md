@@ -1,3 +1,10 @@
+---
+layout: page
+title: Python Post-Intermediate - Level 4
+permalink: /python/post-intermediate/
+description: Production-level Python - design patterns, async programming, testing, and type hints
+---
+
 # Python Post-Intermediate - Level 4
 
 **Target Audience:** Developers building production applications  

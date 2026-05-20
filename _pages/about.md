@@ -463,20 +463,22 @@ permalink: /about/
 <!-- Hero Section -->
 <div class="about-hero">
   <h1>Mangena Venu Madhavan</h1>
-  <div class="tagline">Python Developer & Generative AI Specialist</div>
+  <div class="tagline">AI/ML Developer | Generative AI Specialist</div>
   <p style="margin: 20px 0; font-size: 1.1em; opacity: 0.9;">
     Building intelligent AI agents and transforming ideas into scalable solutions
   </p>
   <div class="contact-links">
     <a href="mailto:venumangenamadhavan@gmail.com">📧 Email</a>
-    <a href="https://linkedin.com/in/mangenavenumadhavan" target="_blank">🔗 LinkedIn</a>
+    <a href="https://www.linkedin.com/in/mangenavenumadhavan" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+    <a href="https://venumadhavan.hashnode.dev" target="_blank" rel="noopener noreferrer">📝 Hashnode Articles</a>
+    <a href="https://github.com/madhavan11601828" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
   </div>
 </div>
 
 <!-- Quick Stats -->
 <div class="stats-container">
   <div class="stat-card">
-    <div class="number">4+</div>
+    <div class="number">5+</div>
     <div class="label">Years Experience</div>
   </div>
   <div class="stat-card">
@@ -500,13 +502,13 @@ permalink: /about/
 
 <div class="summary-box">
   <p>
-    I'm a Python Developer and Generative AI Specialist with nearly 4 years of experience delivering end-to-end AI-driven solutions. My expertise lies in developing intelligent agents, Retrieval-Augmented Generation (RAG) applications, and automation workflows using frameworks like LangChain, LlamaIndex, and Azure AI Services.
+    I'm an AI/ML Developer and Generative AI Specialist with 5+ years of experience delivering end-to-end AI-driven solutions across Banking & Finance, Energy, and Technology sectors. My expertise spans intelligent agent development, Retrieval-Augmented Generation (RAG) applications, and automation workflows using LangChain, LlamaIndex, and Azure AI Services.
   </p>
   <p>
-    I transform business requirements into scalable technical solutions by collaborating closely with clients, delivery teams, and cross-functional stakeholders. I've successfully designed and deployed enterprise-grade AI agents including financial analysis systems and intelligent automation workflows that reduce manual intervention and improve operational efficiency.
+    Currently at Teleperformance, I develop and deploy AI/ML solutions for Banking and Finance clients, driving automation and intelligent decision-making at scale. Previously at Infosys, I designed enterprise-grade AI agents for Intel and Delek — including financial analysis systems and purchase order automation workflows that significantly reduced manual intervention.
   </p>
   <p>
-    Beyond technical development, I lead team collaborations on agent projects, facilitate requirement-gathering discussions with stakeholders, and ensure smooth delivery of mission-critical solutions. Recognized for innovation in Generative AI, time-series forecasting, and computer vision, I bring a balance of technical depth, leadership, and client engagement to every project.
+    I bring a balance of technical depth, client engagement, and delivery leadership. Recognized for innovation in Generative AI, time-series forecasting, and computer vision, and awarded 3rd place at the Infosys & Google Gemini Hackathon 2024. I write and publish structured AI learning content to share knowledge and contribute to the broader AI community.
   </p>
 </div>
 
@@ -518,9 +520,21 @@ permalink: /about/
 <div class="timeline">
   <div class="timeline-item">
     <h3>Current Role</h3>
-    <div class="position">Associate Consultant - Python Developer & Generative AI Specialist</div>
+    <div class="position">AI/ML Developer I</div>
+    <div class="company">Teleperformance | Hyderabad, India</div>
+    <div class="duration">March 2026 – Present</div>
+    <ul>
+      <li><strong>AI/ML Solutions:</strong> Developing and deploying AI and machine learning solutions tailored for Banking and Finance clients, enabling intelligent automation and data-driven decision-making.</li>
+      <li><strong>Generative AI:</strong> Applying Generative AI frameworks including LangChain and LlamaIndex to build enterprise-grade intelligent systems.</li>
+      <li><strong>Domain Expertise:</strong> Leveraging 5+ years of AI/ML experience to deliver scalable, production-ready solutions in a high-impact financial services environment.</li>
+    </ul>
+  </div>
+
+  <div class="timeline-item">
+    <h3>Previous Role</h3>
+    <div class="position">Associate Consultant — Python Developer & Generative AI Specialist</div>
     <div class="company">Infosys Limited | Hyderabad, India</div>
-    <div class="duration">January 2024 – Present (2+ years)</div>
+    <div class="duration">January 2024 – February 2026 (2+ years)</div>
     <ul>
       <li><strong>Agent Development:</strong> Designed and deployed intelligent agents including a financial analysis system for Intel providing actionable insights into operational/capital expenditures, and an automation agent for Delek streamlining purchase order validation with AI-powered checkpoints.</li>
       <li><strong>LLM Solutions:</strong> Engineered semantic search solutions for RCA documents using LangChain and LlamaIndex, improving root-cause analysis speed and accuracy.</li>
@@ -528,13 +542,13 @@ permalink: /about/
       <li><strong>Cost Optimization:</strong> Innovated a cost-optimized LLM Router that dynamically routes queries to reduce costs while maintaining performance.</li>
       <li><strong>Team Leadership:</strong> Led team efforts on multiple agent development projects, ensuring seamless collaboration and on-time delivery.</li>
       <li><strong>Client Collaboration:</strong> Engaged directly with clients during requirement-gathering sessions, translating business needs into effective AI-driven solutions.</li>
-      <li><strong>Package Development:</strong> Designed modular Python packages ensuring scalability, reusability, and maintainability for internal PoCs.</li>
+      <li><strong>Recognition:</strong> 3rd Place — Infosys & Google Gemini Hackathon 2024.</li>
     </ul>
   </div>
 
   <div class="timeline-item">
-    <h3>Previous Role</h3>
-    <div class="position">Associate Consultant - AI & Machine Learning Developer</div>
+    <h3>Earlier Role</h3>
+    <div class="position">Associate Consultant — AI & Machine Learning Developer</div>
     <div class="company">Capgemini Technology Services Limited | Hyderabad, India</div>
     <div class="duration">June 2021 – January 2024 (2.5+ years)</div>
     <ul>
@@ -543,7 +557,7 @@ permalink: /about/
       <li><strong>Computer Vision:</strong> Collaborated on a computer vision solution for cervical fracture detection, applying transfer learning to improve diagnostic accuracy.</li>
       <li><strong>Prompt Engineering:</strong> Refined large language models for improved accuracy in structured text conversion projects like the A2B conversion tool.</li>
       <li><strong>Custom Packages:</strong> Built custom Python packages streamlining data processing workflows for various client PoCs.</li>
-      <li><strong>Recognition:</strong> Awarded 'Project of the Month' for building a Time-Series Analysis Platform; received 'Rising Star' recognition for impactful contributions to PoC development.</li>
+      <li><strong>Recognition:</strong> Awarded 'Project of the Month' for Time-Series Analysis Platform; received 'Rising Star' award for impactful PoC contributions.</li>
     </ul>
   </div>
 </div>
@@ -770,8 +784,9 @@ permalink: /about/
     I'm always interested in discussing AI solutions, innovative projects, and opportunities to create impact. Whether you're building your next AI application or exploring how to leverage intelligent automation, I'd love to connect.
   </p>
   <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
-    <a href="mailto:venumangenamadhavan@gmail.com" class="cta-button">Get in Touch via Email</a>
-    <a href="https://linkedin.com/in/mangenavenumadhavan" target="_blank" class="cta-button">Connect on LinkedIn</a>
+    <a href="mailto:venumangenamadhavan@gmail.com" class="cta-button">📧 Get in Touch</a>
+    <a href="https://www.linkedin.com/in/mangenavenumadhavan" target="_blank" rel="noopener noreferrer" class="cta-button">🔗 Connect on LinkedIn</a>
+    <a href="https://venumadhavan.hashnode.dev" target="_blank" rel="noopener noreferrer" class="cta-button">📝 Read My Articles</a>
   </div>
   <p style="margin-bottom: 0; margin-top: 25px; font-size: 0.95em; opacity: 0.9;">
     📍 Based in Hyderabad, India

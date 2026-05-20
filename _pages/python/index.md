@@ -41,148 +41,78 @@ Python is the foundation of modern AI, data science, and web development. This p
 ✅ Debug and optimize Python applications  
 ✅ Follow industry best practices  
 
-## Learning Path
+## Complete Learning Curriculum
 
-Navigate through Python concepts by difficulty level:
+Explore each level of Python mastery with comprehensive courses:
 
-### 🟢 Beginner Level
+### 🟢 [Level 1: Python Basics](/python/basics/)
 
-<div class="learning-snippet beginner" data-content-id="basics-variables">
-  <h4>Variables, Data Types & Basic Operations</h4>
-  <p class="snippet-summary">Master the fundamentals: Learn how to declare variables, understand Python's data types (strings, integers, floats, booleans), and perform basic arithmetic and string operations. Perfect starting point for Python beginners.</p>
-  <ul>
-    <li>Variables and naming conventions</li>
-    <li>Data types and type conversion</li>
-    <li>Basic arithmetic and string operations</li>
-    <li>Input and output operations</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('basics-variables', 'Variables, Data Types & Basic Operations')">Learn More</button>
-</div>
+**Master the fundamentals** - Perfect for complete beginners with no programming experience.
 
-<div class="learning-snippet beginner" data-content-id="basics-control-flow">
-  <h4>Control Flow: If, Elif, Else & Loops</h4>
-  <p class="snippet-summary">Learn to make decisions in your code with conditional statements and automate repetitive tasks with loops. Essential for writing smart Python programs.</p>
-  <ul>
-    <li>If, elif, else statements</li>
-    <li>Comparison and logical operators</li>
-    <li>For and while loops</li>
-    <li>Break, continue, and pass statements</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('basics-control-flow', 'Control Flow: If, Elif, Else & Loops')">Learn More</button>
-</div>
+- Variables, data types, and basic operations
+- Control flow with if/elif/else statements and loops
+- Input/output operations
+- Comments and code style
+- **Estimated Time:** 2-3 weeks (20-30 hours)
 
-### 🟡 Pre-Intermediate Level
+[📖 Start Python Basics Course →](/python/basics/){: .btn .btn-primary}
 
-<div class="learning-snippet pre-intermediate" data-content-id="preint-functions">
-  <h4>Functions & Code Organization</h4>
-  <p class="snippet-summary">Master function definition, parameters, return values, and scope. Learn how to organize code effectively and avoid repetition through proper function design.</p>
-  <ul>
-    <li>Function definition and calling</li>
-    <li>Parameters and return values</li>
-    <li>Default arguments and *args, **kwargs</li>
-    <li>Variable scope and namespaces</li>
-    <li>Docstrings and function documentation</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('preint-functions', 'Functions & Code Organization')">Learn More</button>
-</div>
+---
 
-<div class="learning-snippet pre-intermediate" data-content-id="preint-datastructures">
-  <h4>Data Structures: Lists, Tuples & Dictionaries</h4>
-  <p class="snippet-summary">Deep dive into Python's most important built-in data structures. Learn their characteristics, methods, and when to use each one for different scenarios.</p>
-  <ul>
-    <li>Lists and list methods</li>
-    <li>List comprehensions</li>
-    <li>Tuples and immutability</li>
-    <li>Dictionaries and key-value pairs</li>
-    <li>Dictionary comprehensions</li>
-    <li>Sets and set operations</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('preint-datastructures', 'Data Structures: Lists, Tuples & Dictionaries')">Learn More</button>
-</div>
+### 🟡 [Level 2: Python Pre-Intermediate](/python/pre-intermediate/)
 
-### 🟠 Intermediate Level
+**Build real programs** - For those who completed basics and want to build practical applications.
 
-<div class="learning-snippet intermediate" data-content-id="int-oop">
-  <h4>Object-Oriented Programming Fundamentals</h4>
-  <p class="snippet-summary">Introduction to OOP concepts in Python. Learn to design classes, create objects, and understand the pillars of OOP: encapsulation, inheritance, and polymorphism.</p>
-  <ul>
-    <li>Classes and objects</li>
-    <li>Attributes and methods</li>
-    <li>Constructors (__init__) and destructors</li>
-    <li>Inheritance and method overriding</li>
-    <li>Polymorphism and duck typing</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('int-oop', 'Object-Oriented Programming Fundamentals')">Learn More</button>
-</div>
+- Data structures: Lists, tuples, dictionaries, and sets
+- Functions and code organization
+- File I/O operations
+- Exception handling and error management
+- **Estimated Time:** 3-4 weeks (30-40 hours)
 
-<div class="learning-snippet intermediate" data-content-id="int-error-handling">
-  <h4>Error Handling & Exceptions</h4>
-  <p class="snippet-summary">Write robust Python code by properly handling errors and exceptions. Learn best practices for try-except blocks and creating custom exceptions.</p>
-  <ul>
-    <li>Try-except blocks</li>
-    <li>Exception types and hierarchy</li>
-    <li>Multiple exception handling</li>
-    <li>Finally and else blocks</li>
-    <li>Custom exceptions</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('int-error-handling', 'Error Handling & Exceptions')">Learn More</button>
-</div>
+[📖 Start Pre-Intermediate Course →](/python/pre-intermediate/){: .btn .btn-primary}
 
-### 🔵 Post-Intermediate Level
+---
 
-<div class="learning-snippet post-intermediate" data-content-id="postint-decorators">
-  <h4>Decorators & Function Wrappers</h4>
-  <p class="snippet-summary">Understand one of Python's most powerful features: decorators. Learn to modify functions and methods using function wrappers and create reusable decorators.</p>
-  <ul>
-    <li>Function decorators</li>
-    <li>Wrapping functions</li>
-    <li>Decorators with arguments</li>
-    <li>Class decorators</li>
-    <li>Built-in decorators (@property, @staticmethod, @classmethod)</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('postint-decorators', 'Decorators & Function Wrappers')">Learn More</button>
-</div>
+### 🟠 [Level 3: Python Intermediate](/python/intermediate/)
 
-<div class="learning-snippet post-intermediate" data-content-id="postint-modules">
-  <h4>Modules, Packages & Imports</h4>
-  <p class="snippet-summary">Organize large Python projects by creating and using modules and packages. Learn import statements, package structure, and how to manage dependencies.</p>
-  <ul>
-    <li>Creating modules</li>
-    <li>Package structure and __init__.py</li>
-    <li>Import statements and variations</li>
-    <li>Relative and absolute imports</li>
-    <li>The sys.path and module search</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('postint-modules', 'Modules, Packages & Imports')">Learn More</button>
-</div>
+**Become a Python developer** - Ready for object-oriented and advanced concepts.
 
-### 🔴 Advanced Level
+- Object-Oriented Programming (OOP)
+- Inheritance and polymorphism
+- Decorators and generators
+- Context managers and magic methods
+- **Estimated Time:** 4-6 weeks (40-60 hours)
 
-<div class="learning-snippet advanced" data-content-id="adv-context-managers">
-  <h4>Context Managers & With Statements</h4>
-  <p class="snippet-summary">Master resource management with context managers. Learn the __enter__ and __exit__ methods, and how to write code that properly handles setup and cleanup.</p>
-  <ul>
-    <li>Context manager protocol</li>
-    <li>The with statement</li>
-    <li>__enter__ and __exit__ methods</li>
-    <li>contextlib module</li>
-    <li>Custom context managers</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('adv-context-managers', 'Context Managers & With Statements')">Learn More</button>
-</div>
+[📖 Start Intermediate Course →](/python/intermediate/){: .btn .btn-primary}
 
-<div class="learning-snippet advanced" data-content-id="adv-metaclasses">
-  <h4>Advanced OOP: Metaclasses & Descriptors</h4>
-  <p class="snippet-summary">Dive into Python's meta-programming features. Understand metaclasses, descriptors, and the descriptor protocol for creating powerful abstractions and frameworks.</p>
-  <ul>
-    <li>Descriptors and descriptor protocol</li>
-    <li>Properties and getters/setters</li>
-    <li>Metaclasses and type()</li>
-    <li>Creating custom metaclasses</li>
-    <li>Advanced inheritance patterns</li>
-  </ul>
-  <button class="btn btn-snippet" onclick="openLearningContent('adv-metaclasses', 'Advanced OOP: Metaclasses & Descriptors')">Learn More</button>
-</div>
+---
+
+### 🔵 [Level 4: Python Post-Intermediate](/python/post-intermediate/)
+
+**Production-ready code** - For developers building real-world applications.
+
+- Advanced OOP design patterns
+- Asynchronous programming and concurrency
+- Type hints and static typing
+- Comprehensive testing strategies
+- **Estimated Time:** 5-7 weeks (50-70 hours)
+
+[📖 Start Post-Intermediate Course →](/python/post-intermediate/){: .btn .btn-primary}
+
+---
+
+### 🔴 [Level 5: Python Advanced](/python/advanced/)
+
+**Master Python internals** - For advanced developers optimizing and extending Python.
+
+- Performance profiling and optimization
+- Memory management and garbage collection
+- C extensions and Cython
+- Web frameworks (Flask, FastAPI)
+- Data science fundamentals (NumPy, Pandas)
+- **Estimated Time:** 6-8 weeks (60-80 hours)
+
+[📖 Start Advanced Course →](/python/advanced/){: .btn .btn-primary}
 
 ## Path Forward
 

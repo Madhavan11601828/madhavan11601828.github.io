@@ -1,3 +1,10 @@
+---
+layout: page
+title: Python Intermediate - Level 3
+permalink: /python/intermediate/
+description: Master OOP, decorators, generators, and advanced Python patterns
+---
+
 # Python Intermediate - Level 3
 
 **Target Audience:** Developers ready for object-oriented and advanced concepts  
