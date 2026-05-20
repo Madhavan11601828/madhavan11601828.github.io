@@ -29,7 +29,8 @@ plugins:
   - jekyll-seo-tag
 
 # GitHub Pages settings
-future: false
+future: true
+permalink: /:title/
 theme: null
 
 # Markdown processor
