@@ -173,10 +173,17 @@ layout: default
           <span class="btn-icon">💼</span>
           <span class="btn-text">LinkedIn</span>
         </a>
-        <a href="mailto:venumangenamadhavan@gmail.com" class="contact-btn email-btn" title="Send Email">
+        <a href="#" class="contact-btn email-btn" title="Send Email" id="email-contact-btn">
           <span class="btn-icon">✉️</span>
           <span class="btn-text">Email</span>
         </a>
+        <script>
+          (function(){
+            var u='venumangenamadhavan',d='gmail.com';
+            var el=document.getElementById('email-contact-btn');
+            if(el){el.href='mailto:'+u+'@'+d;}
+          })();
+        </script>
       </div>
       
       <p class="contact-note">Associate Consultant at Infosys | Generative AI & Agentic AI Specialist | Open to collaborations and opportunities</p>

@@ -16,6 +16,18 @@
     
     <!-- SEO Tags -->
     {% seo %}
+
+    <!-- Cover image for LinkedIn/social previews -->
+    {% if page.cover_image %}
+    <meta property="og:image" content="{{ site.url }}{{ page.cover_image }}" />
+    <meta name="twitter:image" content="{{ site.url }}{{ page.cover_image }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% endif %}
+
+    <!-- Remove Jekyll version fingerprint -->
+    <script>
+      document.querySelector('meta[name="generator"]')?.remove();
+    </script>
     
     <style>
         /* Page Header with Logo */

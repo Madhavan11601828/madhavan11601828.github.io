@@ -468,7 +468,8 @@ permalink: /about/
     Building intelligent AI agents and transforming ideas into scalable solutions
   </p>
   <div class="contact-links">
-    <a href="mailto:venumangenamadhavan@gmail.com">📧 Email</a>
+    <a href="#" id="about-email-link-1">📧 Email</a>
+    <script>(function(){var u='venumangenamadhavan',d='gmail.com';var el=document.getElementById('about-email-link-1');if(el){el.href='mailto:'+u+'@'+d;}})();</script>
     <a href="https://www.linkedin.com/in/mangenavenumadhavan" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
     <a href="https://venumadhavan.hashnode.dev" target="_blank" rel="noopener noreferrer">📝 Hashnode Articles</a>
     <a href="https://github.com/madhavan11601828" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
@@ -784,7 +785,8 @@ permalink: /about/
     I'm always interested in discussing AI solutions, innovative projects, and opportunities to create impact. Whether you're building your next AI application or exploring how to leverage intelligent automation, I'd love to connect.
   </p>
   <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
-    <a href="mailto:venumangenamadhavan@gmail.com" class="cta-button">📧 Get in Touch</a>
+    <a href="#" class="cta-button" id="about-email-link-2">📧 Get in Touch</a>
+    <script>(function(){var u='venumangenamadhavan',d='gmail.com';var el=document.getElementById('about-email-link-2');if(el){el.href='mailto:'+u+'@'+d;}})();</script>
     <a href="https://www.linkedin.com/in/mangenavenumadhavan" target="_blank" rel="noopener noreferrer" class="cta-button">🔗 Connect on LinkedIn</a>
     <a href="https://venumadhavan.hashnode.dev" target="_blank" rel="noopener noreferrer" class="cta-button">📝 Read My Articles</a>
   </div>
